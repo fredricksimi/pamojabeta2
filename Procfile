@@ -1,0 +1,1 @@
+web: gunicorn pamojaproject.wsgi --log-file -
