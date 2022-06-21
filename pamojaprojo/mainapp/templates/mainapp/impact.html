@@ -1,0 +1,400 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pamoja CBO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../../fonts.googleapis.com/cssa1c0.css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/stuff.css" />
+  <link rel="stylesheet" href="css/stuff2.css" /> -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+<link rel="stylesheet" href="css/magnific-popup.css"/>
+<link rel="stylesheet" href="css/aos.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/bootstrap-datepicker.css"/> -->
+    <script
+        nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+                <img class="img-fluid" src="{% static 'images/pamojawhite.png' %}" alt="logo"
+                  style="width:300px;height:auto">
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:causes' %}" class="nav-link">Causes</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+                <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                    style="width:180px;height:auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">What We Do</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                                Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="">
+            <div class=""
+                style="background-image: url('../../static/images/home/bg_5.jpg'); height:550px;background-position: center center;">
+                <div class=" container"
+                    style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;">
+                    <h6 class="animated fadeIn" style="font-size: 40px;font-weight: bold;">About Us</h6>
+                    <!-- <a href="#who-we-are" class="animated fadeIn btn" style="color:white; padding: 14px 54px;background-color: #007bff;border:none;font-weight: bold;">Get Started</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br><br>
+        <h4>Pamoja CBO takes a participatory approach that gives the community full recognition in its programs. This is
+            made possible through:</h4><br><br><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'images/home/wawa1.jpg' %}" class="img-fluid" style="border-radius:10px;">
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-center">Community Collaborative Meetings (CCM)</h4>
+                <p>These meetings are what guide Pamoja activities, and are an essential early step for
+                    working with the community. They provide the forum for addressing the organizations
+                    objectives. Community collaborative meetings include representation from self-help groups,
+                    support groups, community-based organizations, churches, schools, the Ministry of Health and
+                    provincial administration (Chiefs and Assistant Chiefs) among others.
+                </p>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="text-center">Community Working Groups (CWGs):</h4>
+                <p>Pamoja acknowledges that communities are capable of creating lasting change for
+                    themselves and that sustainability depends on community leadership. They know the problems,
+                    they have the solutions and they can carry out the work that is required. We see our role as
+                    facilitating the process. We can bring groups together, involve technical experts to act as a
+                    resource
+                    for the community and build the community's capacity for planning activities, carrying them out
+                    measuring
+                    the impact of their efforts. Pamoja thus values networking. It works tirelessly to establish
+                    linkages with other
+                    organizations, relevant government ministries and funding organizations.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/home/wawa2.jpg' %}" class="img-fluid" style="border-radius:10px;">
+            </div>
+        </div><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'images/home/wawa3.jpg' %}" class="img-fluid" style="border-radius:10px;">
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-center">Community Working Groups (CWGs):</h4><br><br>
+                <p>This is an innovative training model that uses a cascading approach to disseminate knowledge within
+                    the community. Field officers and communit health volunteers (CHVs) are first taught "how to teach"
+                    and then have
+                    monthly trainings with experts on priority topics for the community such as HIV prevention,
+                    nutrition, sanitation, etc.
+                    The field officers and CHVs identify these priority areas during their fieldwork and by looking at
+                    the Annual
+                    Operation Plan (AOP) for the health sector. The teams then teach this same information to community
+                    members during their
+                    home-visits, caregiver meetings and other public forum.
+                </p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/120/000000/external-beneficiary-funeral-service-flaticons-flat-flat-icons-2.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">15,687 Beneficiaries</a>
+                        </h5>
+                        <p class="card-text">Pamoja Community Based Organization, through its programs serves a total of
+                            <b>15,687</b> direct beneficiaries including
+                            PEPFAR supported <b>3,722</b> adolescent girls and young women, <b>5,886</b> orphans and
+                            vulnerable children and additional <b>3,104</b>
+                            enrolled in child sponsorship program supported by Plan International
+                        </p>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/120/000000/external-medical-test-medical-smashingstocks-flat-smashing-stocks.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">19,621 HIV Testings</a>
+                        </h5>
+                        <p class="card-text">A total of <b>11,091</b> 84% of our direct beneficiaries received HIV test
+                            including children, adolescents and young women aged 20-24</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/120/000000/external-contraceptive-pills-national-hiv-aids-and-aging-awareness-day-smashingstocks-circular-smashing-stocks.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">2,022 Contraceptives</a>
+                        </h5>
+                        <p class="card-text">More than <b>1,049</b> girls and young women have been initiated in
+                            contraceptives</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/120/000000/external-registration-veterinary-flaticons-lineal-color-flat-icons.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">2604 Birth
+                                Registrations</a>
+                        </h5>
+                        <p class="card-text">Over <b>1,204</b> children were facilitated to acquire birth certificates
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/120/000000/external-drugs-bioengineering-flaticons-lineal-color-flat-icons.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">530 Prep</a>
+                        </h5>
+                        <p class="card-text">We have initiated <b>391</b> young women (15-24) on HIV Pre-exposure
+                            prophyalxis to reduce their risk to contracting HIV</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/120/000000/external-children-relationship-flaticons-lineal-color-flat-icons.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">2400 Early Child
+                                Development</a>
+                        </h5>
+                        <p class="card-text">More than <b>600</b> children benefited from our early child development
+                            and education (ECD) support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/120/000000/external-fees-university-flaticons-flat-flat-icons-2.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">2718 School Fees</a>
+                        </h5>
+                        <p class="card-text">We provided school fees support to over <b>2,000</b> children in secondary
+                            schools</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/120/000000/external-uniform-back-to-school-flaticons-flat-flat-icons.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">3723 School Uniform</a>
+                        </h5>
+                        <p class="card-text">More than <b>3,723</b> children in secondary and primary schools have
+                            received school uniforms and other scholastic materials</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/color/120/000000/pad.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">5311 Sanitary Pads</a>
+                        </h5>
+                        <p class="card-text">We have provided year round sanitary pads and sex education to over
+                            <b>1,325</b> which has helped girls gain more school days and club absenteeism</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <div class="card-img-top" style="height:200px;width:100%" style="background-color:#f3f0eb"><br>
+                        <div class="icon"
+                            style="width: 160px;height: 160px;position: relative;background: #fff;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                            <img src="https://img.icons8.com/fluency/120/000000/money-transfer.png"
+                                style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 12%;" />
+                        </div>
+                    </div>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        <p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">531 Cash Transfer</a>
+                        </h5>
+                        <p class="card-text">We gave out unconditional cash transfer to a total of <b>472</b> young
+                            women aged 20-24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+</body>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script
+  src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+<script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+<script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+<script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+<script>eval(mod_pagespeed_pnj9KVQygE);</script>
+<script
+  src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+<script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+<script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+<script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+<script>eval(mod_pagespeed_hFobBDlaRU);</script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script
+  src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+<script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+<script>eval(mod_pagespeed_327Vziik2k);</script>
+<script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+<script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/givehope/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:09:47 GMT -->
+
+</html>

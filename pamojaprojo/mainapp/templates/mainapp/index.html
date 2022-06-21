@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="css/stuff.css" />
+  <link rel="stylesheet" href="css/stuff2.css" /> -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+
+  <script
+    nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+<style>
+  .fact-area .fact-box {
+    box-shadow: 0px 20px 50px rgb(153 153 153 / 20%);
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+.single-fact {
+    text-align: center;
+    margin: 45px 0;
+    padding: 8px 16px;
+    border-right: 1px solid #ddd;
+}
+.single-fact:last-child {
+    border-right: 0;
+}
+.single-fact h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.single-fact p {
+    margin: 0;
+    font-size: 14px;
+}
+</style>
+  </head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+            <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                style="width:180px;height:auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">What We Do</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                        <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                            Impact</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('../../static/images/home/image.png'); height:760px;"
+        data-stellar-background-ratio="0.5">
+        <div class=" container" style="color: #fff;font-size: 15px;left: 15px;right: 15px;text-align: left;text-shadow: none;top: 50%;padding-top: 200px;">
+          <h1 class="animated fadeIn" style="font-family:'abc-modern'; color: #fff; font-size: 60px;font-weight: 800;line-height: 90px;text-transform: capitalize;max-width: 600px;margin-bottom: 20px;">Empowering Community Transformation</h1>
+            <!-- <a href="" class="animated fadeIn btn-primary" style="color:white; padding: 14px 54px;border:none;font-weight: bold;">Get Started</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="who-we-are" style="margin-bottom: 0px;">
+    <div class="container">
+      <div class="call-to-action" style="background-color: #f5f5f5;padding: 10px 55px 25px;">
+        <div class="row">
+          <div class="col-md-9">
+            <h1 style="margin-top: 20px;font-family: 'abc-modern';">Join our Campaign!</h1>
+            <p style="margin-bottom: 1rem;font-family: 'abc-modern';">This is the total amount that we have donated so far: <span>$30,00,000</span></p>
+          </div>
+          <div class="col-md-3">
+            <a href="" class="pull-right btn btn-primary" style="border-radius:7px;padding:14px 54px;margin-top: 30px;"><b>Donate Now</b></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center who-we-are" style="padding-top:80px;padding-bottom:10px;">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid" src="{% static 'images/ourworld.png' %}" alt="" style="width:200px;height:auto;transition: all .6s ease-in-out;transform: scale(.9);"/>
+            <h2 style="font-size:24px">Our World</h2>
+            <p class="lead">We are in 32 Countries</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="{% static 'images/ourpromise.png' %}" alt="" style="width:200px;height:auto;transition: all .6s ease-in-out;transform: scale(.9);"/>
+            <h2 style="font-size:24px">Our Promise</h2>
+            <p class="lead">59% Of all $ goes to Programs</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="{% static 'images/ourreach.png' %}" alt=""  style="width:200px;height:auto;transition: all .6s ease-in-out;transform: scale(.9);"/>
+            <h2 style="font-size:24px">Our Reach</h2>
+            <p class="lead">98 Million Members</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span style="margin-top: -100px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#d2e7c4" fill-opacity="1" d="M0,128L1440,224L1440,320L0,320Z"></path></svg>
+      </span>
+      <div style="background-color: #d2e7c4;backface-visibility: calc(50%);">
+        <div class="container">
+          <div class="our-details-tab padding-bottom">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="{% static 'images/home/Humanitarian Help-amico.png' %}" style="width:400px;height:auto;" alt=""
+                class="img-reponsive">
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-center">
+                <b>WELCOME TO PAMOJA ORGANIZATION</b>
+              </h4><br>
+              <p></p>
+              <p>
+                Pamoja CBO is a human centered grassroot organization that exists to 
+                improve the quality of life of communities in Western Kenya. We are 
+                passionate about helping communities develop the skills they need to 
+                make positive changes for themselves. We do so by developing, designing, 
+                supporting and cascading service based initiatives and programs to people 
+                in society who need them the most. <br><br>We prioritize health care, education, 
+                water & sanitation, youth and women economic empowerment. We have embedded 
+                real time approaches to engaging vulnerable children and adolescent women 
+                and young girls with the aim of creating happy, able and healthy communities.
+              </p>
+              <br><br>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div style="background-color: #027701;border-radius: 7px;">
+                    <span href="#" style="width: 100%;padding: 30px;margin-bottom: 0px;border-radius: 5px;position: relative;z-index: 0;text-align: center;">
+                      <div class="icon" style="width: 80px;height: 80px;position: relative;background: #027701;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                        <!-- <img src="https://img.icons8.com/color/40/000000/donate.png"style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 25%;"/> -->
+                        <i class="fas fa-donate" style="font-size: 50px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 20%;"></i>
+                      </div>
+                      <div style="width:100%">
+                        <p style="color: #fff;font-weight:bold">Start Donating</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div style="background-color: #027701;border-radius: 7px;">
+                    <span href="#" style="width: 100%;padding: 30px;margin-bottom: 0px;border-radius: 5px;position: relative;z-index: 0;text-align: center;">
+                      <div class="icon" style="width: 80px;height: 80px;position: relative;background: #027701;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                        <!-- <img src="https://img.icons8.com/color/40/000000/crowd-skin-type-3.png"  style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 25%;"/> -->
+                        <i class="fas fa-users" style="font-size: 50px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 15%;"></i>
+                      </div>
+                      <div>
+                        <p style="color: #fff;font-weight:bold">Join Us</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div style="background-color: #027701;border-radius: 7px;">
+                    <span href="#" style="width: 100%;padding: 30px;margin-bottom: 0px;border-radius: 5px;position: relative;z-index: 0;text-align: center;">
+                      <div class="icon" style="width: 80px;height: 80px;position: relative;background: #027701;border-radius: 50%;margin: 0 auto;margin-bottom: 10px;">
+                        <!-- <img src="https://img.icons8.com/fluency/40/000000/welfare.png" style="font-size: 40px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 25%;"/> -->
+                        <i class="fas fa-hands-helping" style="font-size: 50px;line-height: 1.2;color: #fff;position: absolute;top: 20%;left: 20%;"></i>
+                      </div>
+                      <div>
+                        <p style="color: #fff;font-weight:bold">Become a Volunteer</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="">
+    <br><br>
+    <div class="p-5">
+      <section class="fact-area">
+        <div class="container">
+          <h5 style="font-weight: bold;">WHAT WE HAVE ACCOMPLISHED</h5><br>
+          <h1>Technical Statistics</h1>
+          <br><br><br>
+          <div class="fact-box">
+            <div class="row align-items-center">
+              <div class="col single-fact section-counter">
+                <h2 class="block-48-counter ftco-number" data-number="15687">0</h2>
+                <p>Beneficiaries</p>
+              </div>
+              <div class="col single-fact section-counter">
+                <h2 class="block-48-counter ftco-number" data-number="19621">0</h2>
+                <p>HIV Testings</p>
+              </div>
+              <div class="col single-fact section-counter">
+                <h2 class="block-48-counter ftco-number" data-number="2022">0</h2>
+                <p>Contraceptives</p>
+              </div>
+              <div class="col single-fact section-counter">
+                <h2 class="block-48-counter ftco-number" data-number="2604">0</h2>
+                <p>Birth Registrations</p>
+              </div>
+              <div class="col single-fact section-counter">
+                <h2 class="block-48-counter ftco-number" data-number="2604">0</h2>
+                <p>Birth Registrations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <br><br><br><br>
+  </div>
+  <div style="background-image: url('../../static/images/home/bgblur.jpg');background-attachment: fixed;z-index: -1;background-position: top center;background-repeat: no-repeat;">
+    <div class="overlay" style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;opacity: .8;background: #063c3f;z-index: -1;"></div>
+    <div class="container" style="padding-top:150px;padding-bottom:150px;">
+      <h6 class="text-center" style="color:white;font-weight: bold;">TESTIMONIALS</h6>
+      <h1 class="text-center" style="color:white;font-weight: bold;">What People Say About Us</h1>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimony-wrap" style="display: block;position: relative;background: white;padding: 30px;border-radius: 4px;box-shadow: 0px 30px 33px -41px rgb(0 0 0 / 24%);">
+            <div class="icon d-flex align-items-center justify-content-center" style="position: absolute;top: -20px;left: 30px;width: 40px;height: 40px;border-radius: 50%;background: #d49a3a;"><span class="fa fa-quote-left"></span></div>
+            <div class="text">
+              <p class="mb-4">This is a testimonial this is a testimonial this is a testimonial this is a testimonial this is a testimonial This is a testimonial this is a testimonial this is a testimonial this is a testimonial this is a testimonial</p>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img src="{% static 'images/home/Potato.jpg' %}" style="width: 80px;height: 80px;position: relative;border-radius: 50%;"/>
+                </div>
+                <div class="ps-3" style="padding-left: 1rem;">
+                  <p class="name">Roger Scott</p>
+                  <span class="position">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimony-wrap" style="display: block;position: relative;background: white;padding: 30px;border-radius: 4px;box-shadow: 0px 30px 33px -41px rgb(0 0 0 / 24%);">
+            <div class="icon d-flex align-items-center justify-content-center" style="position: absolute;top: -20px;left: 30px;width: 40px;height: 40px;border-radius: 50%;background: #d49a3a;"><span class="fa fa-quote-left"></span></div>
+            <div class="text">
+              <p class="mb-4">This is a testimonial this is a testimonial this is a testimonial this is a testimonial this is a testimonial This is a testimonial this is a testimonial this is a testimonial this is a testimonial this is a testimonial</p>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img src="{% static 'images/home/Potato.jpg' %}" style="width: 80px;height: 80px;position: relative;border-radius: 50%;"/>
+                </div>
+                <div class="ps-3" style="padding-left: 1rem;">
+                  <p class="name">Roger Scott</p>
+                  <span class="position">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimony-wrap" style="display: block;position: relative;background: white;padding: 30px;border-radius: 4px;box-shadow: 0px 30px 33px -41px rgb(0 0 0 / 24%);">
+            <div class="icon d-flex align-items-center justify-content-center" style="position: absolute;top: -20px;left: 30px;width: 40px;height: 40px;border-radius: 50%;background: #d49a3a;"><span class="fa fa-quote-left"></span></div>
+            <div class="text">
+              <p class="mb-4">This is a testimonial this is a testimonial this is a testimonial this is a testimonial this is a testimonial This is a testimonial this is a testimonial this is a testimonial this is a testimonial this is a testimonial</p>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img src="{% static 'images/home/Potato.jpg' %}" style="width: 80px;height: 80px;position: relative;border-radius: 50%;"/>
+                </div>
+                <div class="ps-3" style="padding-left: 1rem;">
+                  <p class="name">Roger Scott</p>
+                  <span class="position">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="site-section section-counter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pr-5">
+          <div class="block-48">
+            <span class="block-48-text-1">Served Over</span>
+            <div class="block-48-counter ftco-number" data-number="1321901">0</div>
+            <span class="block-48-text-1 mb-4 d-block">Children in 150 Countries</span>
+            <p class="mb-0"><a href="#" class="btn btn-white px-3 py-2">View Our Program</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 welcome-text">
+          <h2 class="display-4 mb-3">Who Are We?</h2>
+          <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+            live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+            language ocean.</p>
+          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p>
+          <p class="mb-0"><a href="#" class="btn btn-primary px-3 py-2">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- Footer -->
+<section style="background-color: #1a1a1a;padding-top:70px;padding-bottom: 70px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="{% static 'images/pamojawhite.png' %}" class="img-fluid" style="width:250px;height:auto;" alt="">
+        <br><br>
+        <p style="color:white;">
+          P.O. Box 2311-40100, Kisumu<br><br>
+          Phone: +254 780 160 0000<br><br>
+          Email: info@pamojapamoja.org
+        </p>
+        <br>
+        <p>
+          <img src="https://img.icons8.com/material-rounded/30/ffffff/facebook-new.png">&nbsp;&nbsp;&nbsp;
+          <img src="https://img.icons8.com/glyph-neue/30/ffffff/instagram-new.png"/>&nbsp;&nbsp;&nbsp;
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png"/>&nbsp;&nbsp;&nbsp;
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/youtube-play.png"/>&nbsp;
+        </p>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <h3 class="pt-3" style="color:white;font-weight: bold;">Navigation</h3>
+        <br>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'mainapp:home' %}" style="color:white;">Home</a></li><br>
+          <li><a href="{% url 'mainapp:about' %}" style="color:white;">About Us</a></li><br>
+          <li><a href="{% url 'mainapp:causes' %}" style="color:white;">Causes</a></li><br>
+          <li><a href="{% url 'mainapp:contact' %}" style="color:white;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3 class="pt-3" style="color:white;font-weight:bold;">Subscribe to our Newsletter</h3>
+        <br>
+        <p style="color:white">Subscribe to our Newsletter to get updates about our services and offers</p>
+        <br>
+        <form class="form">
+          <div class="form-group mb-2">
+            <label class="sr-only">Email</label>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <button type="submit" class="btn mb-2" style="padding: 7px 14px;border-radius:7px;background-color: #027701;color:white">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <br><br>
+    <h6 class="text-center" style="color:white;">&copy; Copyright 2022 | All Rights Reserved.</h6>
+  </div>
+</section>
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script
+    src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+  <script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+  <script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+  <script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+  <script>eval(mod_pagespeed_pnj9KVQygE);</script>
+  <script
+    src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+  <script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+  <script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+  <script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+  <script>eval(mod_pagespeed_hFobBDlaRU);</script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script
+    src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+  <script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+  <script>eval(mod_pagespeed_327Vziik2k);</script>
+  <script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+  <script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+  <script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+</html>

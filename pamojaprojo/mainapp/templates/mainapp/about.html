@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="../../../fonts.googleapis.com/cssa1c0.css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/stuff.css" />
+  <link rel="stylesheet" href="css/stuff2.css" /> -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+  <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+<link rel="stylesheet" href="css/magnific-popup.css"/>
+<link rel="stylesheet" href="css/aos.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/bootstrap-datepicker.css"/> -->
+  <script
+    nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+</head>
+
+<body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+        <img class="img-fluid" src="{% static 'images/pamojawhite.png' %}" alt="logo"
+          style="width:300px;height:auto">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+          <li class="nav-item active"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="{% url 'mainapp:causes' %}" class="nav-link">Causes</a></li>
+          <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+          <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+            <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                style="width:180px;height:auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">What We Do</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                        <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                            Impact</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <br><br><br><br><br><br><br><br><br><br>
+  <div>
+    <div class="">
+      <div class="" style="background-image: url('../../static/images/home/bg_5(copy).jpg'); height:350px;background-position: center center;">
+        <div class=" container" style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;padding-top:180px">
+          <h6 class="animated fadeIn" style="font-size: 40px;font-weight: bold;">About Us</h6>
+            <!-- <a href="#who-we-are" class="animated fadeIn btn" style="color:white; padding: 14px 54px;background-color: #007bff;border:none;font-weight: bold;">Get Started</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #f3f1f1;">
+    <br><br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'images/home/sitdown.jpg' %}" alt="" class="img-fluid" style="width:650px;height:auto;border-radius:10px;">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5" style="">
+                <h1 style="font-weight: bold;">Who We Are?</h1>
+                <br>
+                <p>
+                    Pamoja CBO is a human centered grassroot organization that exists to 
+                    improve the quality of life of communities in Western Kenya. We are 
+                    passionate about helping communities develop the skills they need to 
+                    make positive changes for themselves. We do so by developing, designing, 
+                    supporting and cascading service based initiatives and programs to people 
+                    in society who need them the most. <br><br>We prioritize health care, education, 
+                    water & sanitation, youth and women economic empowerment. We have embedded 
+                    real time approaches to engaging vulnerable children and adolescent women 
+                    and young girls with the aim of creating happy, able and healthy communities.
+                </p>
+                </p>
+                <br>
+                <!-- <a href="{% url 'mainapp:contact' %}"><button class="btn btn-primary" style="padding:11px 15px;border-radius:7px;border:none;color:white;font-weight: bold;">Get in touch</button></a> -->
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+</div>
+<div class="container">
+  <br><br>
+  <h1 class="text-center" style="font-weight: bold;">Our Team</h1>
+  <br><br>
+  <div class="row">
+      <div class="col-md-3 text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/home/jamesbond.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Joy Atieno"></span>
+          <span class="" style="color:black"><b>Portas Odula Olwande, Msc, PhD</b><br>Board Chair</span>
+      </div>
+      <div class="col-md-3 text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/home/jasonbourne.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Lavender Okore"></span>
+          <span class="" style="color:black"><b>Valleria Ndege, BSc Nursing</b><br>Technical Advisor and Resources Mobilization</span>
+      </div>
+      <div class="col-md-3 text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/home/lara.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Sandra Akinyi"></span>
+          <span class="" style="color:black"><b>Denielle Elliot, PhD</b><br>Strategic Communication and Engagement</span>
+      </div>
+      <div class="col-md-3 text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/home/clarkkent.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Vannessa Kawira"></span>
+          <span class="" style="color:black"><b>Elizabeth Opiyo BSc, Msc, PhD</b><br>Research and Women's Empowerment</span>
+      </div>
+  </div><br><br>
+  <center><a href="{% url 'mainapp:staff' %}"><button class="btn btn-primary" style="border-radius:10px;padding: 11px 15px;color:white;border:none;">See More Staff</button></a></center>
+</div>
+<br><br><br>
+<div class="container">
+  <div class="row p-3">
+    <div class="col-md-6">
+        <h2 style="font-weight:bold">Our Mission&nbsp;<img src="https://img.icons8.com/external-flaticons-flat-flat-icons/24/000000/external-rocket-achievements-flaticons-flat-flat-icons.png"/></h2><br>
+        <p>To empower communities to identify and address the most significant needs affecting their well-being</p><br><br>
+        <h2 style="font-weight:bold">Our Vision&nbsp;<img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/24/000000/external-target-computer-programming-flaticons-lineal-color-flat-icons.png"/></h2><br>
+        <p>Healthy, happy and able communities</p>
+    </div>
+    <div class="col-md-6">
+        <h2 style="font-weight:bold">Our Objectives&nbsp;<img src="https://img.icons8.com/color-glass/24/000000/clipboard.png"/></h2><br>
+        <p><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png"/>&nbsp;Enhance the capacity of communities to: <br>
+        <span style="margin-left:50px;">Assess their strengths, capabilities and resources</span><br>
+        <span style="margin-left:50px;">Assess and prioritize their needs</span><br>
+        <span style="margin-left:50px;">Leverage additional resources to meet their needs</span><br>
+        <span style="margin-left:50px;">Plan, implement and evaluate interventions</span>
+        </p>
+        <p><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png"/>&nbsp;Strengthen community leadership</p>
+        <p><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png"/>&nbsp;Facilitate linkages, collaboration and coordination between individuals, organizations and relevant Government Departments</p>
+    </div>
+</div>
+</div>
+<br>
+<div class="container">
+  <br>
+  <h1 class="text-center" style="font-weight: bold;">Our History&nbsp;<img src="https://img.icons8.com/external-flaticons-flat-flat-icons/36/000000/external-history-history-flaticons-flat-flat-icons-3.png"/></h1>
+  <br><br>
+  <div class="row p-3">
+      <div class="col-md-6" style="padding-top:30px;">
+          <img src="{% static 'images/home/pamojahistory.jpg' %}" style="border-radius:10px;" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+          <p>"Pamoja" (which means 'together' in Swahili) was formed in 2007 to bring 
+              together community groups and support them in achieving their objectives.
+              Pamoja CBO developed from the observations of several people who were frequently
+              rock climbing in Kit Mikayi area of Western Kenya. We all had backgrounds in health
+              and development work and noticed the struggle of individuals to provide basic necessities for 
+              their families, such as safe drinking water, a healthy diet, sanitatin and education. <br><br>More importantly
+              we noticed how many community members were working on each others' plots of land, a youth group teaching
+              HIV prevention through a soccer club, a community run pharmacy, a widow's group which supported orphans and 
+              many other groups which had formed to bring change to the community. But many groups worked in isolation of each other,
+              had overlapping activities, did not have the training to maximize the impact of their efforts and lacked the resources
+              to establish projects, which they thought, were important
+          </p>
+      </div>
+  </div>
+</div>
+<br><br><br><br>
+<div style="background-image:url(../../static/images/home/section-bg2.jpg);background-position:center center;background-repeat: no-repeat;">
+  <div class="container" style="padding-top:120px;padding-bottom:120px;">
+      <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+              <div style="background-color: white;border-radius:20px;padding:40px;">
+                  <h1 style="font-weight: bold;">They Need Your Help</h1>
+                  <p>For <span style="color:#027701"><b>$10</b></span>, you can help change someone's life today</p>
+                  <p>To donate to our ongoing causes, use the following details:</p>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>Bank Name</td>
+                        <td><b>KCB(Kenya) Ltd</b></td>
+                      </tr>
+                      <tr>
+                        <td>Account Name</td>
+                        <td><b>PAMOJA CBO</b></td>
+                      </tr>
+                      <tr>
+                        <td>Account Number</td>
+                        <td><b>1207067156</b></td>
+                      </tr>
+                      <tr>
+                        <td>Branch Name</td>
+                        <td><b>United Mall</b></td>
+                      </tr>
+                      <tr>
+                        <td>Branch Code</td>
+                        <td><b>01243</b></td>
+                      </tr>
+                      <tr>
+                        <td>SWIFT Code</td>
+                        <td><b>KCBKENX</b></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<br><br><br>
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <h1 style="font-weight: bold;padding-top: 70px;">Join Us</h1>
+          <br>
+          <p>Join our organization by becoming a volunteer or a partner by <br>clicking the button below</p>
+          <br><br>
+          <a href="{% url 'mainapp:volunteer' %}">
+            <button class="btn btn-primary" style="padding:9px 15px;border-radius:7px;color:white;">Become a Volunteer or Mentor</button>
+          </a>
+      </div>
+      <div class="col-md-6">
+          <div>
+              <img src="{% static 'images/home/hands.png' %}" class="img-fluid" style="height:350px;width:auto;border-radius: 10px;">
+          </div>
+      </div>
+  </div>
+</div>
+<br><br><br><br>
+<h5 class="text-center">&copy; Copyright 2022 | All Rights Reserved</h5>
+<br><br>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script
+  src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+<script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+<script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+<script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+<script>eval(mod_pagespeed_pnj9KVQygE);</script>
+<script
+  src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+<script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+<script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+<script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+<script>eval(mod_pagespeed_hFobBDlaRU);</script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script
+  src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+<script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+<script>eval(mod_pagespeed_327Vziik2k);</script>
+<script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+<script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/givehope/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:09:47 GMT -->
+
+</html>
