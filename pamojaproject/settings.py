@@ -16,7 +16,7 @@ import dj_database_url
 import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+from django.contrib.messages import constants as messages
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp'
+    'mainapp',
+    'crispy_forms',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,3 +138,39 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 django_on_heroku.settings(locals())
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
+CKEDITOR_UPLOAD_PATH = 'blog_uploads/'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+        'extraPlugins': ','.join(
+            ['codesnippet',
+             'uploadimage',
+             'uploadwidget',
+             'widget',
+             'dialog', ]),
+        'allowedContent': True,
+        'height': '250px',
+        'width': '100%',
+        'styles': {'font-family':'#(family)'},
+        'overides': [{ 'element': 'font', 'attributes': {'face': 'null'}}]
+
+
+    },
+}
+# TINYMCE_FILEBROWSER = True
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+# TINYMCE_DEFAULT_CONFIG = {
+#     'plugins': "table,spellchecker,paste,searchreplace,image,link,lists",
+#     'cleanup_on_startup': True,
+#     'custom_undo_redo_levels': 10,
+# }
+# TINYMCE_SPELLCHECKER = True
