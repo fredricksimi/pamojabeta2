@@ -23,39 +23,29 @@
         integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
         integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-<link rel="stylesheet" href="css/magnific-popup.css"/>
-<link rel="stylesheet" href="css/aos.css">
-<link rel="stylesheet" href="css/ionicons.min.css">
-<link rel="stylesheet" href="css/bootstrap-datepicker.css"/> -->
+<link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
+        rel="stylesheet" type="text/css" />
+<style>
+    .geeks {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    .geeks img {
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+    }
+        
+    .geeks:hover img {
+        transform: scale(1.2);
+    }
+</style>
     <script
         nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
 </head>
 
 <body>
-    <!--<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
-                <img class="img-fluid" src="{% static 'images/pamojawhite.png' %}" alt="logo"
-                  style="width:300px;height:auto">
-              </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
-                    <li class="nav-item active"><a href="{% url 'mainapp:causes' %}" class="nav-link">Causes</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="{% url 'mainapp:home' %}">
@@ -102,52 +92,80 @@
     </div>
     <br><br>
 
-    <div class="container">
+
+    <div class="container pt-4" style="max-width:1440px;">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <p>
+                    <span style="font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;">Our</span>&nbsp;&nbsp;
+                    <span style="font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;">Work</span>
+                </p>
+                <p class="pt-2 text-justify" style="font-family: 'Brandon Text';">
+                    Your generosity makes it possible for our work to save lives, educate people about addiction, open hearts, 
+                    and create meaningful change that touches countless lives. Whether it's a one-time gift or a recurring donation, 
+                    every dollar goes directly to our mission of raising up recovery voices.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <hr style="border:1px solid rgb(151, 148, 148)">
+                Share this page on your:
+                <div class="pt-3">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/causes">
+                        <img src="https://img.icons8.com/ios-filled/30/027701/facebook-new.png"/>
+                    </a>&nbsp;&nbsp;
+                    <a target="_blank" href="http://twitter.com/share?text=PamojaPamoja&url=http://127.0.0.1:8000/causes">
+                        <img src="https://img.icons8.com/ios-filled/30/027701/twitter.png"/>
+                    </a>&nbsp;&nbsp;
+                    <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=http://127.0.0.1:8000/causes">
+                        <img src="https://img.icons8.com/ios-filled/30/027701/linkedin-circled--v1.png"/>
+                    </a>
+                    <!-- <img src="https://img.icons8.com/ios-filled/30/027701/twitter.png"/>
+                    <img src="https://img.icons8.com/ios-filled/30/027701/linkedin-circled--v1.png"/>
+                    <img src="https://img.icons8.com/ios-filled/30/027701/instagram-new--v1.png"/> -->
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="container" style="max-width:1440px;">
         <div class="row" id="replaceable-content">
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="">
-                        <img src="{% static 'images/home/ecosystem.jpeg' %}" class="card-img-top"
-                            style="height:200px;width:100%">
+                        <img src="{% static 'images/hiv1.jpg' %}" class="card-img-top"
+                            style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
-                        <!--<p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
-                        </p>-->
-                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">HIV Prevention &amp; awareness among young women</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">HIV Prevention &amp; awareness among young women</a>
                         </h5>
                         <p class="card-text">Most people living with or at risk of contracting HIV do not 
                             have access to prevention, care, or treatment: Nyanza Region has been registering some
                             of the highest HIV prevalence rates in the last decade
                         </p>
-                        <p class="pt-2" style="color:#027701">
-                            <a href="{% url 'mainapp:cause-detail' %}">Learn more&nbsp;<i class="fas fa-external-link-alt" style="color:#027701"></i></a>
-                        </p>
-                        <!--<p class="text-black pt-3" style="font-weight: bold;"><img
-                                src="https://img.icons8.com/material-two-tone/20/000000/time.png" />&nbsp;Duration:
-                            Since 2016</p>-->
+                        <center>
+                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                        </center>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="">
-                        <img src="{% static 'images/home/childrenhiv.jpg' %}" class="card-img-top"
-                            style="height:200px;width:100%">
+                        <img src="{% static 'images/hiv2.jpg' %}" class="card-img-top"
+                            style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
-                        <!--<p><span class="author text-black font-weight-bolder">Henry Jackson Foundation</span>
-                        </p>-->
-                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">Children affected/infected with HIV</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Children affected/infected with HIV</a>
                         </h5>
                         <p class="card-text">Regular HIV testing, treatment, monitoring and care for children living with HIV can 
                             enable them to live long and fulfilling lives
                         </p>
-                        
-                        <!--<p class="text-black pt-3" style="font-weight: bold;"><img
-                                src="https://img.icons8.com/material-two-tone/20/000000/time.png" />&nbsp;Duration:
-                            Since 2013 - present</p>-->
+                        <center>
+                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -155,20 +173,18 @@
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="">
                         <img src="{% static 'images/home/gallery/DSC_0061.jpg' %}" class="card-img-top"
-                            style="height:200px;width:100%">
+                            style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
-                        <!--<p><span class="author text-black font-weight-bolder">Plan International Kenya</span>
-                        </p>-->
-                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">Inclusion of Girls in decision making</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Inclusion of Girls in decision making</a>
                         </h5>
                         <p class="card-text">Girls have demonstrated interest and enthusiasm in taking lead in advocating against issues 
                             affecting the community upon completion of the sensitization program
                         </p>
-                        <!--<p class="text-black pt-3" style="font-weight: bold;"><img
-                                src="https://img.icons8.com/material-two-tone/20/000000/time.png" />&nbsp;Duration:
-                            Since 2021 - present</p>-->
+                        <center>
+                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -178,18 +194,18 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="">
-                        <img src="{% static 'images/home/secondarychild.jpg' %}" class="card-img-top"
-                            style="height:200px;width:100%">
+                        <img src="{% static 'images/DSC_0238.jpg' %}" class="card-img-top"
+                            style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
-                        <!-- <p><span class="author text-black font-weight-bolder">Amnesty International</span> -->
                         </p>
-                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">Support the Children's Education</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Support the Children's Education</a>
                         </h5>
                         <p class="card-text">Support children with school levy, school supplies and early childhood development educational support</p>
-                        <!-- <p class="text-black pt-3" style="font-weight: bold;"><img
-                                src="https://img.icons8.com/doodle/20/000000/money.png">&nbsp;KES 300,000 raised</p> -->
+                        <center>
+                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -197,17 +213,17 @@
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="">
                         <img src="{% static 'images/home/Sustainable.jpg' %}" class="card-img-top"
-                            style="height:200px;width:100%">
+                            style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
-                        <!-- <p><span class="author text-black font-weight-bolder">United Nations</span> -->
                         </p>
-                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">Sustainable Livelihoods</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Sustainable Livelihoods</a>
                         </h5>
                         <p class="card-text">Empowering community members to move out of the poverty cycle</p>
-                        <!-- <p class="text-black pt-3" style="font-weight: bold;"><img
-                                src="https://img.icons8.com/doodle/20/000000/money.png">&nbsp;KES 1,000,000 raised</p> -->
+                        <center>
+                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -215,17 +231,17 @@
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="">
                         <img src="{% static 'images/home/safewater.jpg' %}" class="card-img-top"
-                            style="height:200px;width:100%">
+                            style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
-                        <!-- <p><span class="author text-black font-weight-bolder">Redcross Foundation</span> -->
                         </p>
-                        <h5 class="card-title"><a href="" style="color:black;font-weight:bold">Providing water filters</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Providing water filters</a>
                         </h5>
                         <p class="card-text">Building the community's capacity to address water safety</p>
-                        <!-- <p class="text-black pt-3" style="font-weight: bold;"><img
-                                src="https://img.icons8.com/doodle/20/000000/money.png">&nbsp;KES 500,000 raised</p> -->
+                        <center>
+                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -233,12 +249,46 @@
             
         </div>
         <br><br>
-        <center>
-            <a href="{% url 'mainapp:volunteer' %}" target="_blank">
-                <button class="btn btn-lg btn-primary" style="border-radius:10px;padding: 15px 20px;"><span style="font-weight:bold;">Join the conversation</span></button>
-            </a>
-        </center>
+        
     </div>
+    <br><br>
+<div class="container">
+  <h1 class="text-center" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Join Us</h1>
+  <br>
+  <div class="row align-items-center">
+      <div class="col-md-7">
+          <br>
+          <h4 class="pb-2" style="font-weight: bold;">The Volunteers Perspective</h4>
+          <p class="text-justify">Great boys and girls; men and women, have an undying urge for positive change.</p>
+          <p class="text-justify">They continuously strive to make a difference in both menial and magnificent ways; they derive self actualization from service- a sustainable source of happiness
+            that cultivates wholesome growth, diligence at work, excellence in simple actions and an unmatched extension of grace.
+          </p>
+          <blockquote class="blockquote" style="font-weight: bold;">
+            "The best teachers of humanity are the lives of great men"
+            <footer class="blockquote-footer text-right">Charles Henry Fowler</footer>
+          </blockquote>
+          <p class="text-justify">
+            <strong>Be with me on the journey- let's pursue grace and spur fulfillment in us and in them. <br>They need you & you need them too.</strong>
+          </p>
+          <br>
+          <a href="{% url 'mainapp:volunteer' %}">
+            <button class="btn btn-primary" style="padding:9px 15px;border-radius:7px;color:white;font-weight: bold;">Become a Volunteer or Mentor</button>
+          </a>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+          <div>
+              <img src="{% static 'images/home/newlavender.jpeg' %}" class="img-fluid" style="height:350px;width:auto;border-radius: 10px;">
+              <p class="text-center pt-2">Awino Okore - Volunteer</p>
+          </div>
+      </div>
+  </div>
+  <!-- <center>
+    <a href="{% url 'mainapp:volunteer' %}" target="_blank">
+        <button class="btn btn-lg btn-primary" style="border-radius:10px;padding: 15px 20px;"><span style="font-weight:bold;">Join the conversation</span></button>
+    </a>
+</center> -->
+</div>
 
     
     <br><br><br>
