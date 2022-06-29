@@ -488,30 +488,28 @@
         </div>
     </div>
 </nav>
+
   <br><br><br><br><br>
   <h1 class="text-center" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Gallery&nbsp;&nbsp;<i class="fas fa-photo-video" style="color:#027701;font-size: 40px;"></i></h1>
   <br>
-  <h4 class="text-center pt-2" style="font-size:14px;line-height: 14px;">ALL {% for category in image_categories %}
-    <span style="font-size:14px;line-height: 14px;padding-left:10px">
-      <a href="{% url 'mainapp:gallery-detail' category.category_name %}">{{category.category_name|upper}}</a>
-    </span>
-  {% endfor %}</h4>
+  <h4  style="font-size:14px;line-height: 14px;" class="text-center"><a href="{% url 'mainapp:gallery' %}">ALL</a> / {{category|upper}}</h4>
   <br><br>
   <div class="container">
     <div class="portfolio-item row">
-      {% for image in images %}
-      <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+        {% for image in images %}
+        <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
             <a href="{{image.image_name.url}}"
                 class="fancylight popup-btn" data-fancybox-group="light">
                 <img class="img-fluid"
                     src="{{image.image_name.url}}"
                     alt="">
             </a>
-        </div>
-      {% endfor %}
-        
+        </div>  
+        {% endfor %}
     </div><br><br>
 </div>
+
+
 
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script

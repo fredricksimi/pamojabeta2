@@ -40,6 +40,43 @@
     .geeks:hover img {
         transform: scale(1.2);
     }
+/* Extra small viewport or screen */
+@media only screen and (min-width : 480px) {
+.kondoo{
+    font-size: 80px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+ }
+ .kondoo2{
+    font-size: 50px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+ }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+.kondoo{
+    font-size: 90px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+ }
+ .kondoo2{
+    font-size: 60px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+ }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+.kondoo{
+    font-size: 96px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+ }
+ .kondoo2{
+    font-size: 66px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+ }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+ .kondoo{
+    font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+ }
+ .kondoo2{
+    font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+ }
+}
+
 </style>
     <script
         nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
@@ -97,13 +134,13 @@
         <div class="row align-items-center">
             <div class="col-md-8">
                 <p>
-                    <span style="font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;">Our</span>&nbsp;&nbsp;
-                    <span style="font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;">Work</span>
+                    <span class="kondoo" style="">Our</span>&nbsp;&nbsp;
+                    <span class="kondoo2" style="">Work</span>
                 </p>
                 <p class="pt-2 text-justify" style="font-family: 'Brandon Text';">
                     Your generosity makes it possible for our work to save lives, educate people about addiction, open hearts, 
                     and create meaningful change that touches countless lives. Whether it's a one-time gift or a recurring donation, 
-                    every dollar goes directly to our mission of raising up recovery voices.
+                    every dollar goes directly to our mission of tramsforming lives.
                 </p>
             </div>
             <div class="col-md-4">
@@ -145,7 +182,9 @@
                             of the highest HIV prevalence rates in the last decade
                         </p>
                         <center>
-                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            <a href="{% url 'mainapp:cause-dreams' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
                         </center>
                     </div>
                 </div>
@@ -164,7 +203,9 @@
                             enable them to live long and fulfilling lives
                         </p>
                         <center>
-                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            <a href="{% url  'mainapp:cause-ovc' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
                         </center>
                     </div>
                 </div>
@@ -183,8 +224,10 @@
                             affecting the community upon completion of the sensitization program
                         </p>
                         <center>
-                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
-                        </center>
+                            <a href="{% url 'mainapp:cause-she-leads' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
+                            </center>
                     </div>
                 </div>
             </div>
@@ -204,7 +247,9 @@
                         </h5>
                         <p class="card-text">Support children with school levy, school supplies and early childhood development educational support</p>
                         <center>
-                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            <a href="{% url 'mainapp:child-sponsorship' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
                         </center>
                     </div>
                 </div>
@@ -222,7 +267,9 @@
                         </h5>
                         <p class="card-text">Empowering community members to move out of the poverty cycle</p>
                         <center>
-                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            <a href="{% url 'mainapp:sustainable-livelihoods' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
                         </center>
                     </div>
                 </div>
@@ -236,10 +283,76 @@
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
                         </p>
-                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Providing water filters</a>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Safe Water Projects</a>
                         </h5>
                         <p class="card-text">Building the community's capacity to address water safety</p>
                         <center>
+                            <a href="{% url 'mainapp:cause-safe-water-projects' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            
+        </div>
+        <br><br>
+        <div class="row" id="replaceable-content">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <a href="">
+                        <img src="{% static 'images/research.jpg' %}" class="card-img-top"
+                            style="height:300px;width:100%">
+                    </a>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Research</a>
+                        </h5>
+                        <p class="card-text">Research projects research projects research projects research projects research projects</p>
+                        <center>
+                            <a href="{% url 'mainapp:cause-research' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <a href="">
+                        <img src="{% static 'images/youth.jpg' %}" class="card-img-top"
+                            style="height:300px;width:100%">
+                    </a>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Youth Center</a>
+                        </h5>
+                        <p class="card-text">Youth center youth center youth center youth center youth center youth center youth center</p>
+                        <center>
+                            <a href="">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
+                <div class="card animate-up-3 mt-5" style="border-radius:15px;">
+                    <a href="">
+                        <img src="{% static 'images/caregivers.jpg' %}" class="card-img-top"
+                            style="height:300px;width:100%">
+                    </a>
+                    <div class="card-body bg-white"
+                        style="border-radius:0 0 15px 15px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2)">
+                        </p>
+                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Caregivers Sensitization</a>
+                        </h5>
+                        <p class="card-text">Caregivers sensitization caregivers sensitization caregivers sensitization caregivers sensitization</p>
+                        <center>
+                            <a href=""></a>
                             <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
                         </center>
                     </div>
@@ -249,7 +362,6 @@
             
         </div>
         <br><br>
-        
     </div>
     <br><br>
 <div class="container">
@@ -273,12 +385,15 @@
           <br>
           <a href="{% url 'mainapp:volunteer' %}">
             <button class="btn btn-primary" style="padding:9px 15px;border-radius:7px;color:white;font-weight: bold;">Become a Volunteer or Mentor</button>
-          </a>
+            <br>
+          </a><br>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-4">
           <div>
-              <img src="{% static 'images/home/newlavender.jpeg' %}" class="img-fluid" style="height:350px;width:auto;border-radius: 10px;">
+              <center>
+                <img src="{% static 'images/home/newlavender.jpeg' %}" class="img-fluid" style="height:350px;width:auto;border-radius: 10px;">
+              </center>
               <p class="text-center pt-2">Awino Okore - Volunteer</p>
           </div>
       </div>

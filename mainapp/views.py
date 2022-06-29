@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .forms import VolunteerForm, MentorForm, MailListForm, ContactPageForm
-from .models import Volunteer, Post
+from .models import ImageCategory, Volunteer, Post, ImageFile, ImageCategory
 from django.contrib import messages
 from django.views.generic import CreateView
 
@@ -20,11 +20,38 @@ def home_view(request):
 def about_view(request):
     return render(request, 'mainapp/about.html')
 
+
+########## Begining of Causes #############
 def causes_view(request):
     return render(request, 'mainapp/causes.html')
 
-def cause_detail_view(request):
-    return render(request, 'mainapp/cause-detail.html')
+def cause_detail_dreams(request):
+    return render(request, 'mainapp/cause-dreams.html')
+
+def cause_detail_ovc(request):
+    return render(request, 'mainapp/cause-ovc.html')
+
+def cause_child_sponsorship(request):
+    return render(request, 'mainapp/cause-child-sponsorship.html')
+
+def cause_detail_she_leads(request):
+    return render(request, 'mainapp/cause-she-leads.html')
+
+def cause_sustainable_livelihoods(request):
+    return render(request, 'mainapp/cause-sustainable-livelihoods.html')
+
+def cause_research(request):
+    return render(request, 'mainapp/cause-research.html')
+
+def cause_safe_water_projects(request):
+    return render(request, 'mainapp/cause-safe-water-projects.html')
+
+
+
+
+
+
+######### End of Causes ##################
 
 def blog_view(request):
     return render(request, 'mainapp/blog.html')
@@ -58,7 +85,15 @@ def impact_view(request):
     return render(request, 'mainapp/impact.html')
 
 def gallery_view(request):
-    return render(request, 'mainapp/gallery.html')
+    images = ImageFile.objects.all()
+    image_categories = ImageCategory.objects.all()
+    context = {'images':images, 'image_categories':image_categories}
+    return render(request, 'mainapp/gallery.html', context)
+
+def gallery_detail(request, catego):
+    images = ImageFile.objects.filter(category__category_name=catego)
+    context = {'images':images, 'category': catego}
+    return render(request, 'mainapp/gallery-detail.html', context)
 
 def staff_view(request):
     return render(request, 'mainapp/staff.html')

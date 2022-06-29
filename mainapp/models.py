@@ -3,6 +3,7 @@ from .countries import COUNTRIES
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.contrib.auth.models import User
+from PIL import Image
 
 class Help_choices(models.Model):
     description = models.CharField(max_length=200)
@@ -68,3 +69,23 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class ImageCategory(models.Model):
+    category_name = models.CharField(max_length=200, blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Image Categories'
+
+    def __str__(self):
+        return self.category_name
+
+class ImageFile(models.Model):
+    image_name = models.ImageField(upload_to='gallery_pics/', blank=True, default='default-banner.jpg')
+    category = models.ForeignKey(ImageCategory, on_delete=models.PROTECT)
+    date_added = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Image Files'
+    
+    def __str__(self):
+        return str(self.image_name)
