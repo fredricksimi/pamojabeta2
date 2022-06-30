@@ -21,13 +21,45 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
-  <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-<link rel="stylesheet" href="css/magnific-popup.css"/>
-<link rel="stylesheet" href="css/aos.css">
-<link rel="stylesheet" href="css/ionicons.min.css">
-<link rel="stylesheet" href="css/bootstrap-datepicker.css"/> -->
   <script
     nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+<style>
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .testitle{
+    font-size:26.5px;
+    margin-bottom:5px;
+  }
+  .mobiliner{
+    line-height:1.4;
+  }
+  .bishop{
+    margin-top:-50px;
+  }
+  .testcenter{
+    text-align:center;
+    font-size:30px!important;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+
+}
+</style>
+
 </head>
 
 <body>
@@ -76,7 +108,7 @@
   <div style="background-color: #D2E7C4;">
     <br><br>
     <div class="container" style="max-width: 1440px;">
-        <div class="row align-items-center pt-5 pb-5">
+        <div class="row align-items-center pt-3 pb-5">
             <div class="col-md-5">
                 <img src="{% static 'images/home/sitdown.jpg' %}" alt="" class="img-fluid" style="border-radius:10px;">
                 <br><br>
@@ -84,19 +116,21 @@
             
             <div class="col-md-1"></div>
             <div class="col-md-6" style="">
-                <h1 style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Who We Are&nbsp;<img src="https://img.icons8.com/doodle/40/000000/crowd.png"/></h1>
+                <h1 class="testitle" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Who We Are&nbsp;<img src="https://img.icons8.com/doodle/40/000000/crowd.png"/></h1>
                 <br>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     Pamoja CBO is a human centered grassroot organization that exists to 
                     improve the quality of life of communities in Western Kenya. We are 
                     passionate about helping communities develop the skills they need to 
                     make positive changes for themselves. We do so by developing, designing, 
                     supporting and cascading service based initiatives and programs to people 
-                    in society who need them the most. <br><br>We prioritize health care, education, 
-                    water & sanitation, youth and women economic empowerment. We have embedded 
-                    real time approaches to engaging vulnerable children and adolescent women 
-                    and young girls with the aim of creating happy, healthy and able communities.
+                    in society who need them the most.
                 </p>
+                <p class="text-justify mobiliner">
+                  We prioritize health care, education, 
+                  water & sanitation, youth and women economic empowerment. We have embedded 
+                  real time approaches to engaging vulnerable children and adolescent women 
+                  and young girls with the aim of creating happy, healthy and able communities.
                 </p>
                 <br>
                 <!-- <a href="{% url 'mainapp:contact' %}"><button class="btn btn-primary" style="padding:11px 15px;border-radius:7px;border:none;color:white;font-weight: bold;">Get in touch</button></a> -->
@@ -116,7 +150,7 @@
           <img src="{% static 'images/home/pamojahistory.jpg' %}" style="border-radius:10px;" class="img-fluid">
       </div>
       <div class="col-md-6">
-          <p class="pt-5 text-justify">"Pamoja" (which means 'together' in Swahili) was formed in 2007 to bring 
+          <p class="pt-5 text-justify mobiliner">"Pamoja" (which means 'together' in Swahili) was formed in 2007 to bring 
               together community groups and support them in achieving their objectives.
               Pamoja CBO developed from the observations of several people who were frequently
               rock climbing in Kit Mikayi area of Western Kenya. We all had backgrounds in health
@@ -140,30 +174,30 @@
   <div class="container pt-5 pb-5">
     <div class="row p-3">
       <div class="col-md-6">
-        <h2   style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Mission&nbsp;<img
+        <h2 class="testitle" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Mission&nbsp;<img
             src="https://img.icons8.com/external-flaticons-flat-flat-icons/24/000000/external-rocket-achievements-flaticons-flat-flat-icons.png" />
         </h2>
-        <p>To empower communities to identify and address the most significant needs affecting their well-being</p>
+        <p class="mobiliner">To empower communities to identify and address the most significant needs affecting their well-being</p>
         <br><br>
-        <h2   style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Vision&nbsp;<img
+        <h2 class="testitle bishop" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Vision&nbsp;<img
             src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/24/000000/external-target-computer-programming-flaticons-lineal-color-flat-icons.png" />
         </h2>
-        <p>Creating Healthy, happy and Able Communities in Kenya</p>
+        <p class="mobiliner">Creating Healthy, happy and Able Communities in Kenya</p>
       </div>
       <div class="col-md-6">
-        <h2 class="pb-2"  style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Objectives&nbsp;<img
+        <h2 class="pb-2 testitle mobiliner"  style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Objectives&nbsp;<img
             src="https://img.icons8.com/color-glass/24/000000/clipboard.png" /></h2>
-        <p><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Enhance the capacity of
+        <p class="mobiliner"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Enhance the capacity of
           communities to: <br>
           <span style="margin-left:50px;">Assess their strengths, capabilities and resources</span><br>
           <span style="margin-left:50px;">Assess and prioritize their needs</span><br>
           <span style="margin-left:50px;">Leverage additional resources to meet their needs</span><br>
           <span style="margin-left:50px;">Plan, implement and evaluate interventions</span>
         </p>
-        <p><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Strengthen community
+        <p class="mobiliner"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Strengthen community
           leadership
         </p>
-        <p><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Facilitate linkages,
+        <p class="mobiliner"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Facilitate linkages,
           collaboration and coordination between individuals, organizations and relevant Government Departments</p>
       </div>
     </div>
@@ -174,7 +208,7 @@
 
 <div class="container">
   <br><br>
-  <h1 class="text-center" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Team</h1>
+  <h1 class="text-center testitle" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Team</h1>
   <br><br>
   <div class="row">
       <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
@@ -184,7 +218,7 @@
       <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
         <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Denielle.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Denielle Elliot"></span>
         <span class="" style="color:black"><span style="font-weight:bold">Denielle Elliot, PhD</span><br>Strategic Communication and Engagement</span>
-      </div>
+      </div><br>
       <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
         <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/judy-alt.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Judith Owuor"></span>
         <span class="" style="color:black"><span style="font-weight:bold;">Judith Owuor</span><br>Programs Manager</span>
@@ -192,7 +226,7 @@
       <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
         <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Suzanna.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Suzanna Attia"></span>
         <span class="" style="color:black"><span style="font-weight:bold;">Dr. Suzanna Attia</span><br>Paediatric Gastroenterologist</span>
-      </div>
+      </div><br>
       <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
         <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/lave.webp' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Awino Okore Okore"></span>
         <span class="" style="color:black"><span style="font-weight: bold;">Awino Okore</span><br>Management Leadership Consultant</span>
@@ -209,9 +243,9 @@
           <div class="col-md-6"></div>
           <div class="col-md-6">
               <div style="background-color: white;border-radius:20px;padding:40px;">
-                  <h1 style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">They Need Your Help</h1>
-                  <p>For <span style="color:#027701"><b>$10</b></span>, you can help one family for <strong>5 days</strong></p>
-                  <p>To donate to our ongoing causes, use the following details:</p>
+                  <h1 class="testcenter" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">They Need Your Help</h1>
+                  <p class="mobiliner">For <span style="color:#027701"><b>$10</b></span>, you can help one family for <strong>5 days</strong></p>
+                  <p class="mobiliner">To donate to our ongoing causes, use the following details:</p>
                   <table class="table table-bordered">
                     <tbody>
                       <tr>

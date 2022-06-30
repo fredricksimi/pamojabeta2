@@ -207,39 +207,56 @@ margin-top: -19px;
     font-size:37px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 65px;max-width: 600px;margin-bottom: 20px;text-align:center;
   }
   .kuku{
-    font-size:22.5px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
+    font-size:22.5px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff; text-align: center;
+  }
+  .kukuku{
+    text-align: center;
   }
   .btona{
     width:100%;
     display:block;
+    margin-top:0px!important;
   }
-  /* .single-fact h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-  } */
+  .testitle{
+    font-size:30px;
+    margin-bottom:-20px;
+  }
+  .cta{
+    background-color: #027701;padding: 4px 27px 20px;border-radius:0px 0px 10px 10px;
+  }
   .single-fact:nth-child(2) {
     border-right: 0;
   }
   .accomp{
     margin-top:20px;
-    font-size:33px;
+    font-size:26.5px;
+    text-align:center;
   }
   .accomp2{
     font-size:25px;
+    text-align:center;
+    margin-bottom:-20px;
   }
   .welc{
-    font-size:20px;
+    font-size:26.5px;
+    font-weight:bold;
     text-align:center;
     margin-bottom:-10px;
   }
   .boba{
     color: #fff;font-size: 15px;left: 15px;right: 15px;text-align: left;text-shadow: none;top: 50%;padding-top: 350px;max-width:1400px;
   }
+  .mobiliner{
+    line-height:1.4;
+  }
 }
 
 @media only screen and (min-width : 480px) {
   .koko{
     font-size:28px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 65px;max-width: 600px;margin-bottom: 20px;
+  }
+  .cta{
+    background-color: #027701;padding: 10px 55px 25px;border-radius:0px 0px 10px 10px;
   }
   .kuku{
     font-size:25px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
@@ -257,6 +274,9 @@ margin-top: -19px;
 .koko{
   font-size:50px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 80px;max-width: 600px;margin-bottom: 20px;
 }
+.cta{
+    background-color: #027701;padding: 10px 55px 25px;border-radius:0px 0px 10px 10px;
+  }
 .kuku{
     font-size:30px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
   }
@@ -269,6 +289,9 @@ margin-top: -19px;
   .koko{
     font-size:55px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 85px;max-width: 600px;margin-bottom: 20px;
 }
+.cta{
+    background-color: #027701;padding: 10px 55px 25px;border-radius:0px 0px 10px 10px;
+  }
 .kuku{
   font-size:35px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
   }
@@ -281,6 +304,9 @@ margin-top: -19px;
   .koko{
     font-size:60px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 90px;max-width: 600px;margin-bottom: 20px;
 }
+.cta{
+    background-color: #027701;padding: 10px 55px 25px;border-radius:0px 0px 10px 10px;
+  }
 .kuku{
     font-size:40px; margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
   }
@@ -340,11 +366,11 @@ margin-top: -19px;
 
   <div id="who-we-are" style="margin-bottom: 0px;">
     <div class="container">
-      <div class="call-to-action" style="background-color: #027701;padding: 10px 55px 25px;border-radius:0px 0px 10px 10px;">
+      <div class="call-to-action cta" style="">
         <div class="row">
           <div class="col-md-9">
             <h1 class="kuku" style="">Join our Campaign!</h1>
-            <p style="margin-bottom: 1rem;font-family: 'Brandon Text';;color:#fff;">This is the total amount that we have donated so far: <span>$30,00,000</span></p>
+            <p class="kukuku" style="margin-bottom: 1rem;font-family: 'Brandon Text';;color:#fff;">This is the total amount that we have donated so far: <span>$30,00,000</span></p>
           </div>
           <div class="col-md-3">
             <a href="{% url 'mainapp:volunteer' %}" target="_blank" class="pull-right btona" style="border-radius:7px;padding:14px 54px;margin-top: 30px;background-color: #fff;color:black;"><b>Join Us</b></a>
@@ -393,7 +419,7 @@ margin-top: -19px;
                 <b>WELCOME TO PAMOJA COMMUNITY BASED ORGANIZATION</b>
               </h4><br>
               <p></p>
-              <p class="text-justify">
+              <p class="text-justify mobiliner">
                 Several years back, we were little boys and girls living freely in villages with patches of dreams.
                 <br>
                 Today, we are at the center of transforming communities, creating happiness, advocating for decent living, supporting
@@ -406,7 +432,7 @@ margin-top: -19px;
                 mentors, CHVs and organisation volunteers.
                 <br>
                 Don't hesitate let's deliver the DREAM - <span style="font-weight:bold;">Healthier, Happier and Able Communities.</span>
-                <br>
+                <br><br>
                 Karibu sana!
               </p>
               <br>
@@ -515,11 +541,11 @@ margin-top: -19px;
     <br><br>
     <div class="container" style="max-width: 1440px;">
       <h6 class="text-center" style="color:#000;font-weight: bold;">TESTIMONIALS</h6>
-      <h1 class="text-center" style="font-family: 'Arnhem Blond' !important;color:#000;font-weight:900;font-size:40px;">What People Say About Us</h1>
+      <h1 class="text-center testitle" style="font-family: 'Arnhem Blond' !important;color:#000;font-weight:900;font-size:40px;">What People Say About Us</h1>
       <br><br>
       <div class="card-deck">
         <div class="card">
-            <p class="card-text pt-5 pr-5 pl-5 text-justify" style="color:#000;font-size:14px;">
+            <p class="card-text pt-5 pr-5 pl-5 text-justify mobiliner" style="color:#000;font-size:14px;">
               I have been in Pamoja CBO for the last one year and I must say that it has been great being 
               in the community of skilled people that strive to give back to the community they are based in. 
               part of the reasons why I was delighted to be here was the enthusiasm that exuberated through service 
@@ -533,7 +559,7 @@ margin-top: -19px;
             </div>
         </div>
         <div class="card">
-          <p class="card-text pt-5 pr-5 pl-5 text-justify" style="color:#000;font-size:14px;">
+          <p class="card-text pt-5 pr-5 pl-5 text-justify mobiliner" style="color:#000;font-size:14px;">
             I spent 10 wonderful weeks at Pamoja CBO, learning from their staff and members, spent time in the community and got 
             to meet hundreds of amazing people. My 10 weeks at Pamoja taught me not only how community based development works in 
             practice, but also that passionate work, good intention, cooperation and support can make massive difference for societies. 
@@ -545,7 +571,7 @@ margin-top: -19px;
           </div>
         </div>
         <div class="card">
-          <p class="card-text pt-5 pr-5 pl-5 text-justify" style="color:#000;font-size:14px;">
+          <p class="card-text pt-5 pr-5 pl-5 text-justify mobiliner" style="color:#000;font-size:14px;">
             Hi, my name is Mourine Odhiambo and I've been a volunteer at Pamoja CBO for almost a year. It's not every day that you get to see, 
             communicate and interact with people whose lives you're working towards changing. I must admint that's what attracted me most to the 
             organization, working with the community. The organization has programs whose backbones are interaction either with oneself, with each 
@@ -564,18 +590,16 @@ margin-top: -19px;
 
 
   <!-- Footer -->
-<section style="background-color: #027701;padding-top:70px;padding-bottom: 70px;">
+<section style="background-color: #027701;padding-top:50px;padding-bottom: 50px;">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <img src="{% static 'images/pamojawhite2.png' %}" class="img-fluid" style="width:250px;height:auto;" alt="">
-        <br><br>
-        <p style="color:white;">
-          P.O. Box 2311-40100, Kisumu<br><br>
-          Phone: +254 780 160 0000<br><br>
-          Email: info@pamojapamoja.org
-        </p>
+        <img src="{% static 'images/pamojawhite2.png' %}" class="img-fluid pt-2" style="width:250px;height:auto;" alt="">
         <br>
+        <p class="mobiliner" style="color:white;">P.O. Box 2311-40100, Kisumu</p>
+        <p class="mobiliner" style="color:white;">Phone: +254 780 160 0000</p>
+        <p class="mobiliner" style="color:white;">Email: <a href="mailto:info@pamojapamoja.org" style="color:white;">info@pamojapamoja.org</a></p>
+        
         <p>
           <a href="https://www.facebook.com/Partners-in-Community-Transformation-PCT-Pamoja-CBO-169747813045984">
             <img src="https://img.icons8.com/material-rounded/30/ffffff/facebook-new.png">
@@ -593,19 +617,19 @@ margin-top: -19px;
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-3">
-        <h3 class="pt-3" style="color:white;font-weight: bold;">Navigation</h3>
-        <br>
+        <h3 class="pt-3 pb-2 mobiliner" style="color:white;font-weight: bold;">Navigation</h3>
+        
         <ul class="list-unstyled">
-          <li><a href="{% url 'mainapp:home' %}" style="color:white;">Home</a></li><br>
-          <li><a href="{% url 'mainapp:about' %}" style="color:white;">About Us</a></li><br>
-          <li><a href="{% url 'mainapp:causes' %}" style="color:white;">Causes</a></li><br>
-          <li><a href="{% url 'mainapp:contact' %}" style="color:white;">Contact</a></li>
+          <li class="mobiliner pb-3"><a href="{% url 'mainapp:home' %}" style="color:white;">Home</a></li>
+          <li class="mobiliner pb-3"><a href="{% url 'mainapp:about' %}" style="color:white;">About Us</a></li>
+          <li class="mobiliner pb-3"><a href="{% url 'mainapp:causes' %}" style="color:white;">Causes</a></li>
+          <li class="mobiliner pb-3"><a href="{% url 'mainapp:contact' %}" style="color:white;">Contact</a></li>
         </ul>
       </div>
       <div class="col-md-4">
         <h3 class="pt-3" style="color:white;font-weight:bold;">Add Impact To Your Inbox</h3>
         
-        <p style="color:white">Get our emails to stay in the know</p>
+        <p class="mobiliner" style="color:white">Get our emails to stay in the know</p>
         
         <form class="form" method="POST">
           {% csrf_token %}

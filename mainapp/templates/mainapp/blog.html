@@ -23,40 +23,68 @@
       integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
       integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
-  <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-<link rel="stylesheet" href="css/magnific-popup.css"/>
-<link rel="stylesheet" href="css/aos.css">
-<link rel="stylesheet" href="css/ionicons.min.css">
-<link rel="stylesheet" href="css/bootstrap-datepicker.css"/> -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <script
       nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+
+<style>
+  
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 30px;font-weight:500;
+  }
+  .mobiliner{
+    line-height:1.4;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+</style>
+
+
 </head>
 <body>
-  <!--<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'mainapp:home' %}">
-            <img class="img-fluid" src="{% static 'images/pamojawhite.png' %}" alt="logo"
-              style="width:300px;height:auto">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-              aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="oi oi-menu"></span> Menu
-          </button>
-          <div class="collapse navbar-collapse" id="ftco-nav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="{% url 'mainapp:causes' %}" class="nav-link">Causes</a></li>
-                <li class="nav-item active"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
-                <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>-->
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'mainapp:home' %}">
@@ -88,21 +116,9 @@
         </div>
     </div>
 </nav>
-  <!-- <div>
-      <div class="">
-          <div class=""
-              style="background-image: url('../../static/images/home/bg_5.jpg'); height:550px;background-position: center center;">
-              <div class=" container"
-                  style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;padding-top:380px">
-                  <h6 class="animated fadeIn" style="font-size: 40px;font-weight: bold;">Blog
-                  </h6>
-                  
-              </div>
-          </div>
-      </div>
-  </div> -->
+
   <br><br><br><br><br>
-  <h1 class="text-center" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;">Our Blog&nbsp;&nbsp;<img src="https://img.icons8.com/fluency/36/undefined/blog.png"/></h1>
+  <h1 class="text-center blogtitle" style="">Our Blog&nbsp;&nbsp;<img src="https://img.icons8.com/fluency/36/undefined/blog.png"/></h1>
   <hr width="15%" class="text-center" style="border:2px solid black;margin-top:-5px;">
   <br><br>
   <main role="main" class="container">
@@ -113,12 +129,12 @@
         </h3> -->
 
         <div class="blog-post">
-        <h2 class="blog-post-title" style="font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;">
+        <h2 class="blog-post-title blogheading mobiliner" style="">
           Empowering Girls through Socio-Economic approaches
         </h2>
         <p class="blog-post-meta">May 31, 2019 by <a href="#">admin</a></p>
 
-        <p>
+        <p class="mobiliner">
           From Marjorie Mack oludhe's freedom song 'Atieno yo!'' and 'coming to birth, to Maya Angelou's 'I know why the caged bird sings', many writers 
           expressed how the African girl was abandoned and how their rights have never been thought of and infringed, being given the second place in any 
           household after their brothers, to being married off for wealth to older men when they hit their puberty, the African society have for a very 
@@ -128,11 +144,12 @@
           are given a chance to a more bearable and comfortable life. They are being given a chance they never had, taken to school and be supported throughout 
           without missing some days during the usual month, and being empowered to be resilient, confident and independent when there's need to be.
         </p>
-        <hr>        
         <p><em>Continue reading</em>...</p>
+        <hr>        
+        
         </div><!-- /.blog-post -->
 
-        <div class="blog-post">
+        <!-- <div class="blog-post">
         <h2 class="blog-post-title" style="font-family: 'Playfair Display', serif;line-height: 48px;font-size: 40px;font-weight:500;">Feed the Animals campaign</h2>
         <p class="blog-post-meta">March 23, 2022 by <a href="#">Steven Grant</a></p>
 
@@ -143,9 +160,9 @@
         <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         <p><em>Continue reading</em>...</p>
-      </div><!-- /.blog-post -->
+      </div>/.blog-post -->
 
-        <div class="blog-post">
+        <!--<div class="blog-post">
         <h2 class="blog-post-title" style="font-family: 'Playfair Display', serif;line-height: 48px;font-size: 40px;font-weight:500;">Save the Girl Child Campaign</h2>
         <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
 
@@ -157,7 +174,7 @@
         </ul>
         <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
         <p><em>Continue reading...</em></p>
-        </div><!-- /.blog-post -->
+        </div> /.blog-post -->
 
         <nav class="blog-pagination">
         <a class="btn btn-primary" href="#">Older</a>
@@ -165,8 +182,8 @@
         </nav>
 
     </div><!-- /.blog-main -->
-
-    <aside class="col-md-4 blog-sidebar">
+    
+    <aside class="col-md-4 blog-sidebar"><br>
         <div class="p-3 mb-3 rounded" style="background-color:#D2E7C4;">
         <h4 class="">About</h4>
         <p class="mb-0">This is temporary this is temporary this is temporary this is temporary this is temporary this is temporary
@@ -177,15 +194,6 @@
         <div class="p-3">
         <h4 class="">Archives</h4>
         <ol class="list-unstyled mb-0">
-            <li><a href="#">March 2014</a></li>
-            <li><a href="#">February 2014</a></li>
-            <li><a href="#">January 2014</a></li>
-            <li><a href="#">December 2013</a></li>
-            <li><a href="#">November 2013</a></li>
-            <li><a href="#">October 2013</a></li>
-            <li><a href="#">September 2013</a></li>
-            <li><a href="#">August 2013</a></li>
-            <li><a href="#">July 2013</a></li>
             <li><a href="#">June 2013</a></li>
             <li><a href="#">May 2013</a></li>
             <li><a href="#">April 2013</a></li>

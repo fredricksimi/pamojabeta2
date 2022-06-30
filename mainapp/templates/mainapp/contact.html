@@ -30,6 +30,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <script
         nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+<style>
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+    .headtitle{
+        font-family: 'Arnhem Blond' !important;font-weight:900;font-size:30px;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+    .headtitle{
+        font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+    }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+    .headtitle{
+        font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+    }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+    .headtitle{
+        font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+    }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+    .headtitle{
+        font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+    }
+}
+</style>
 </head>
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -75,7 +108,7 @@
 {% endfor %}
 {% endif %}
   <br><br><br><br><br>
-  <h1 class="text-center" style="font-family: 'Arnhem Blond' !important;font-weight:900;">Don't be shy. <span style="color:#027701;font-family: 'Arnhem Blond' !important;font-weight:900;">Come say Hi!</span></h1>
+  <h1 class="text-center headtitle">Don't be shy. <span style="color:#027701;font-family: 'Arnhem Blond' !important;font-weight:900;">Come say Hi!</span></h1>
   <br><br>
   <div class="container">
     <div class="row">
@@ -94,11 +127,12 @@
                 <div class="form-group">
                     {{form.message|as_crispy_field}}
                 </div>
-                <button type="submit" class="btn btn-primary" style="padding:9px 15px;border-radius:9px;">Submit</button>
+                <button type="submit" class="btn btn-primary" style="padding:9px 16px;border-radius:9px;">Submit <i
+                    class="fas fa-paper-plane"></i></button>
             </form>
         </div>
         <div class="col-md-2"></div><br><br>
-        <div class="col-md-5">
+        <div class="col-md-5 d-none d-sm-block">
             <img src="{% static 'images/home/contactill.png' %}" class="img-fluid" alt="">
         </div>
     </div>

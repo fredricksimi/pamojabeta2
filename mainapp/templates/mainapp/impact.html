@@ -68,6 +68,114 @@
         color: #000 !important;
         border-color: #d2e7c4 !important;
     }
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .our{
+    font-size: 60px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 40px;
+  }
+  .impact{
+    font-size:50px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 40px;
+  }
+  .mobiliner{
+    line-height:1.4;
+  }
+  .t1{
+    font-size:40px;
+  }
+  .t2{
+    font-size:20px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:20px;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+  .our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+  .our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+.our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
 </style>
 </head>
 
@@ -108,10 +216,10 @@
         <div class="row align-items-center">
             <div class="col-md-5">
                 <p>
-                    <span style="font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;">Our</span><br><br>
-                    <span style="font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;">Impact</span>
+                    <span class="our" style="">Our</span><br>
+                    <span class="impact" style="">Impact</span>
                 </p>
-                <p class="pt-4" style="font-family: 'Brandon Text';">
+                <p class="pt-4 mobiliner" style="font-family: 'Brandon Text';">
                   Your generosity makes it possible for our work to save lives, educate people about addiction, open hearts, 
                   and create meaningful change that touches countless lives. Whether it's a one-time gift or a recurring donation, 
                   every dollar goes directly to our mission of raising up recovery voices.
@@ -126,7 +234,7 @@
                   </div>
                   <div class="btn-group mr-2" role="group" aria-label="Second group">
                     <a href="{% url 'mainapp:mentor' %}">
-                        <button type="button" class="btona2"><span style="font-family:'Brandon Text'">Mentor with Us</span></button>
+                        <button type="button" class="btona2"><span style="font-family:'Brandon Text'">Mentor</span></button>
                     </a>
                   </div>
                   <div class="btn-group mr-2" role="group" aria-label="Third group">
@@ -149,13 +257,13 @@
           
           <div class="col-md-3">
             <p style="font-family:'Lyon Display Web Black';">
-              <span style="font-size:60px">15,687</span> <br>
-              <span style="font-size:40px;color:#027701">Beneficiaries</span>
+              <span class="t1">15,687</span> <br>
+              <span class="t2" style="color:#027701">Beneficiaries</span>
             </p>
           </div>
 
           <div class="col-md-3">
-            <p class="" style="font-family:'Brandon Text'">
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text'">
               Pamoja Community Based Organization, through its programs serves a total of 15,687 direct 
               beneficiaries including PEPFAR supported 3,722 adolescent girls and young women, 5,886 orphans 
               and vulnerable children and additional 3,104 enrolled in child sponsorship program supported by Plan International.
@@ -169,10 +277,10 @@
           </div>
           <div class="col-md-3">
             <p style="font-family:'Lyon Display Web Black';">
-              <span style="font-size:40px">19,621</span><br>
-              <span style="font-size:30px;color:#027701"> HIV Tests</span>
+              <span class="t3">19,621</span><br>
+              <span class="t4" style="color:#027701"> HIV Tests</span>
             </p>
-            <p style="font-family:'Brandon Text';">
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">
               A total of 11,091 (84%) of our direct beneficiaries
               received HIV test including children, adolescents and young
               women aged 20-24
@@ -180,10 +288,10 @@
           </div>
           <div class="col-md-3 order-4 order-md-3">
             <p style="font-family:'Lyon Display Web Black';">
-              <span style="font-size:40px">2,718</span><br>
-              <span style="font-size:30px;color:#027701"> School Fees</span>
+              <span class="t3">2,718</span><br>
+              <span class="t4" style="color:#027701"> School Fees</span>
             </p>
-            <p style="font-family:'Brandon Text';">
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">
               We provided school fees support to over 2,000 children in secondary schools
             </p>
           </div>
@@ -202,7 +310,7 @@
               <span style="font-size:30px">5,311</span>
               <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Sanitary Pads</span>
             </p>
-            <p class="" style="font-family:'Brandon Text';">We have provided year round sanitary pads and sex 
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">We have provided year round sanitary pads and sex 
               education to over 1,325 which has helped girls gain more school days and cub absenteeism</p>
           </div>
 
@@ -214,7 +322,7 @@
               <span style="font-size:30px">2,022</span>
               <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Contraceptives</span>
             </p>
-            <p class="" style="font-family:'Brandon Text';">More than 1,049 girls and young women have been initiated in contraceptives</p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 1,049 girls and young women have been initiated in contraceptives</p>
           </div>
 
           <div class="col-md-3">
@@ -225,7 +333,7 @@
               <span style="font-size:30px">531</span>
               <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Cash Transfers</span>
             </p>
-            <p class="" style="font-family:'Brandon Text';">We gave out unconditional cash transfer to a total of 472 young women aged 20-24</p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">We gave out unconditional cash transfer to a total of 472 young women aged 20-24</p>
           </div>
 
           <div class="col-md-3">
@@ -236,7 +344,7 @@
               <span style="font-size:30px">3,723</span>
               <span style="font-size:25px;color:#027701">&nbsp;&nbsp;School Uniforms</span>
             </p>
-            <p class="" style="font-family:'Brandon Text';">More than 3,723 children in secondary and primary schools have received school uniforms and other scholastic materials</p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 3,723 children in secondary and primary schools have received school uniforms and other scholastic materials</p>
           </div>
         </div>
 
@@ -251,7 +359,7 @@
               <span style="font-size:30px">2,400</span><br>
               <span style="font-size:25px;color:#027701">Early Child Development</span>
             </p>
-            <p class="" style="font-family:'Brandon Text';">More than 600 children benefited from our early child development and education (ECD) support</p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 600 children benefited from our early child development and education (ECD) support</p>
           </div>
           <div class="col-md-3">
             <center>
@@ -263,7 +371,7 @@
               <span style="font-size:30px">2,604</span><br>
               <span style="font-size:25px;color:#027701">Birth Registrations</span>
             </p>
-            <p class="" style="font-family:'Brandon Text';">Over 1,204 children were facilitated to acquire birth certificates</p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">Over 1,204 children were facilitated to acquire birth certificates</p>
           </div>
         </div>
 
@@ -273,10 +381,10 @@
           </div>
           <div class="col-md-6">
             <p style="font-family:'Lyon Display Web Black';">
-              <span style="font-size:60px">530</span>
-              <span style="font-size:40px;color:#027701">&nbsp;&nbsp;Prep</span>
+              <span class="t1">530</span>
+              <span class="t2" style="color:#027701">&nbsp;&nbsp;Prep</span>
             </p>
-            <p class="" style="font-family:'Brandon Text'">
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text'">
               We have initiated 391 young women (15-24) on HIV Pre exposure prophylaxis to reduce their risk to contracting HIV.
             </p>
           </div>
