@@ -202,6 +202,38 @@ margin-bottom: 20px;
 margin-top: -19px;
 }
 /* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .koko{
+    font-size:30px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 65px;max-width: 600px;margin-bottom: 20px;
+  }
+  .kuku{
+    font-size:22.5px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
+  }
+  .btona{
+    width:100%;
+    display:block;
+  }
+  .single-fact h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  .single-fact:nth-child(2) {
+    border-right: 0;
+  }
+  .accomp{
+    margin-top:20px;
+    font-size:33px;
+  }
+  .accomp2{
+    font-size:25px;
+  }
+  .welc{
+    font-size:20px;
+    text-align:center;
+    margin-bottom:-10px;
+  }
+}
+
 @media only screen and (min-width : 480px) {
   .koko{
     font-size:43px;font-family:'Arnhem Blond'; color: #fff;font-weight: 800;line-height: 65px;max-width: 600px;margin-bottom: 20px;
@@ -209,6 +241,11 @@ margin-top: -19px;
   .kuku{
     font-size:25px;margin-top: 20px;font-family: 'Arnhem Blond';font-weight: 900;color:#fff;
   }
+  .btona{
+    width:100%;
+    display:block;
+  }
+  
 }
 /* Small viewport or screen */
 @media only screen and (min-width : 768px) {
@@ -342,7 +379,7 @@ margin-top: -19px;
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-7 col-xs-12">
-              <h4 class="pt-4" style="font-weight: bold;">
+              <h4 class="pt-4 welc" style="font-weight: bold;">
                 <b>WELCOME TO PAMOJA COMMUNITY BASED ORGANIZATION</b>
               </h4><br>
               <p></p>
@@ -364,7 +401,7 @@ margin-top: -19px;
               </p>
               <br>
               <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-4 pb-2">
+                <div class="col pb-2">
                   <center>
                     <div style="background-color: #027701;border-radius: 7px; width:120px;height:120px;">
                       <span href="#" style="width: 100%;padding: 30px;margin-bottom: 0px;border-radius: 5px;position: relative;z-index: 0;text-align: center;">
@@ -378,7 +415,7 @@ margin-top: -19px;
                     </div>
                   </center>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 pb-2">
+                <div class="col pb-2">
                   <center>
                     <div style="background-color: #027701;border-radius: 7px; width:120px;height:120px;">
                       <span href="#" style="width: 100%;padding: 30px;margin-bottom: 0px;border-radius: 5px;position: relative;z-index: 0;text-align: center;">
@@ -392,7 +429,7 @@ margin-top: -19px;
                     </div>
                   </center>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 pb-2">
+                <div class="col pb-2">
                   <center>
                     <div style="background-color: #027701;border-radius: 7px; width:120px;height:120px;">
                       <span href="#" style="width: 100%;padding: 30px;margin-bottom: 0px;border-radius: 5px;position: relative;z-index: 0;text-align: center;">
@@ -419,8 +456,8 @@ margin-top: -19px;
     <div class="pt-2 pr-5 pl-5 pb-2">
       <section class="fact-area">
         <div class="container">
-          <h1 style="font-weight: bold;">WHAT WE HAVE ACCOMPLISHED</h1><br>
-          <h2>Technical Statistics</h2>
+          <h1 class="accomp" style="font-weight: bold;">WHAT WE HAVE ACCOMPLISHED</h1><br>
+          <h2 class="accomp2">Technical Statistics</h2>
           <br><br>
           <div class="fact-box">
             <div class="row align-items-center">

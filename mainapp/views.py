@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .forms import VolunteerForm, MentorForm, MailListForm, ContactPageForm
-from .models import ImageCategory, Volunteer, Post, ImageFile, ImageCategory
+from .models import ImageCategory, Volunteer, Post, ImageFile
 from django.contrib import messages
 from django.views.generic import CreateView
 

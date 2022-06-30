@@ -21,6 +21,55 @@
         rel="stylesheet" type="text/css" />
   <script
     nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+<style>
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .staffheading{
+    font-size: 30px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:33px;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .staffheading{
+    font-size: 33px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:33px;
+  }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+  .staffheading{
+    font-size: 35px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:35px;
+  }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+  .staffheading{
+    font-size: 37px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:37px;
+  }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+  .staffheading{
+    font-size: 40px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:40px;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -60,7 +109,7 @@
       <div class="">
         <div class="" style="background-image: url('../../static/images/staffbanner.png'); height:400px;background-position: center center;background-size:cover;background-color: #d2e7c4;">
           <div class=" container" style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;padding-top:180px">
-            <h6 class="animated fadeIn" style="font-size: 40px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'">Our Amazing Staff</h6>
+            <h6 class="animated fadeIn staffheading" style="">Our Amazing Staff</h6>
               <!-- <a href="#who-we-are" class="animated fadeIn btn" style="color:white; padding: 14px 54px;background-color: #007bff;border:none;font-weight: bold;">Get Started</a> -->
           </div>
         </div>
@@ -68,7 +117,7 @@
     </div>
     <br><br>
   <div class="container">
-    <h1 style="font-weight:bold">Board of Directors</h1><br><br>
+    <h1 class="stafftitle" style="font-weight:bold">Board of Directors</h1><br><br>
     <div class="row">
         <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
             <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
@@ -98,7 +147,7 @@
       </div>
     </div><br>
     <br>
-    <h1 style="font-weight:bold">Management & Team</h1><br><br>
+    <h1 class="stafftitle" style="font-weight:bold">Management & Team</h1><br><br>
     <div class="row">
         <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
             <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Judy.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
@@ -159,7 +208,7 @@
         </div>
     </div>
     <br><br><br>
-    <h1 style="font-weight:bold">Advisory Board</h1><br><br>
+    <h1 class="stafftitle" style="font-weight:bold">Advisory Board</h1><br><br>
     <div class="row">
         <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
             <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Carrie.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
