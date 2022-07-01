@@ -24,14 +24,43 @@
     <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
         rel="stylesheet" type="text/css" />
 
-    <style>
-        .lyon {
-            font-family: 'Lyon Display Web Black'
-        }
-        .arnhem {
-            font-family: 'Arnhem Blond'
-        }
-    </style>
+<style>
+    .lyon {
+        font-family: 'Lyon Display Web Black'
+    }
+    .arnhem {
+        font-family: 'Arnhem Blond'
+    }
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+    .mobiliner{
+        line-height:1.4;
+    }
+    .cha-1 {
+        order:1;
+    }
+    .cha-2{
+        padding-top:25px;
+        order:2;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+
+}
+</style>
     <script
         nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
 </head>
@@ -88,7 +117,7 @@
       <div class="container" style="max-width:1440px">
         
         <div class="row">
-    <div class="col-xl-4 order-xl-2">
+    <div class="col-xl-4 order-xl-2 cha-2">
         <!-- Progress track -->
         <div class="card">
             <!-- Card header -->
@@ -104,16 +133,15 @@
                 <!-- List group -->
                 <ul class="list-group list-group-flush list my--3">
                     
-                    <p class="text-gray display-5">1. Children affected/infected with HIV</p>
-                    <p class="text-gray display-5">2. Inclusion of Girls in decision making</p>
-                    <p class="text-gray display-5">3. Support the Children's Education</p>
-                    <p class="text-gray display-5">4. Sustainable Livelihoods</p>
-                    <p class="text-gray display-5">5. Providing water filters</p>
+                    <p class="text-gray display-5 mobiliner">1. <a href="{% url 'mainapp:cause-ovc' %}">Children affected/infected with HIV</a></p>
+                    <p class="text-gray display-5 mobiliner">2. <a href="{% url 'mainapp:cause-she-leads' %}">Inclusion of Girls in decision making</a></p>
+                    <p class="text-gray display-5 mobiliner">3. <a href="{% url 'mainapp:child-sponsorship' %}">Support the Children's Education</a></p>
+                    <p class="text-gray display-5 mobiliner">4. <a href="{% url 'mainapp:sustainable-livelihoods' %}">Sustainable Livelihoods</a></p>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="col-xl-8 order-xl-1">
+    <div class="col-xl-8 order-xl-1 cha-1">
         <div class="row">
         </div>
         <div class="card">
@@ -128,24 +156,24 @@
                 </div>
             </div>
             <div class="card-body">
-                <p style="font-weight: bold;font-size:17px;">a) Kaila Safe Water Intervention</p>
-                <p class="text-justify">This activity involved distribution of 1000 water filters to 
+                <p class="mobiliner" style="font-weight: bold;font-size:17px;">a) Kaila Safe Water Intervention</p>
+                <p class="text-justify mobiliner">This activity involved distribution of 1000 water filters to 
                     households in Kaila sub-location in Seme sub County, of Kisumu County, Kenya. The 
                     area experiences intermittent cholera outbreaks due to inadequate safe water. Pamoja 
                     CBO collaborated with Kaila community and MOH to plan, implement, and evaluate this intervention.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     This activity furthers our exempt purposes by building the community's capacity to address this 
                     important health issue. We are allocating approximately 2% of our time to this project.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     Funding for this project has come in the form of in-kind donations to Pamoja CBO, of LifeStraw water 
                     filters donated by the manufacturer, Vestergaard-Frandsen. Pamoja CBO human resources for the project 
                     were funded by the Texas entity, through private donations.
                 </p>
                 <br>
-                <p style="font-weight:bold;font-size:17px">b) Remba Island Water, Sanitation and Development Project</p>
-                <p class="text-justify">
+                <p class="mobiliner" style="font-weight:bold;font-size:17px">b) Remba Island Water, Sanitation and Development Project</p>
+                <p class="text-justify mobiliner">
                     The Remba Island Safe Water Project was a short-term immediate solution for the urgent health needs on the 
                     island. To build on this project, Pamoja CBO has begun working with the MOH, Rotary International, and the 
                     Water and Sanitation Rotary Action Group, to develop a long-term safe water solution for Remba Island. This 
@@ -154,7 +182,7 @@
                     is on second phase and is scheduled to end in December 2018. We are allocating approximately 10% of our time t
                     owards activity planning in 2010.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     This activity furthers our exempt purposes by turning the short-term water project into a holistic long-term 
                     community development program. Funding for the implementation of this project is from Rotary International, 
                     Park Cities Rotary Club, Rotary Club of Olympia, Rotary Club of Lacey and the Water and Sanitation Rotarian 
@@ -162,19 +190,19 @@
                     was partially funded by private donations through the Texas entity.
                 </p>
                 <br>
-                <p style="font-weight:bold;font-size:17px;">c) Remba Island Safe Water Project (RESWA)</p>
-                <p class="text-justify">
+                <p class="mobiliner" style="font-weight:bold;font-size:17px;">c) Remba Island Safe Water Project (RESWA)</p>
+                <p class="text-justify mobiliner">
                     Remba Island is situated in Lake Victoria, in Mbita Sub County of Homa - Bay County, Kenya. Remba is a small fishing 
                     island supporting a population of approximately 4600 people. The quality of life for people on Remba is adversely affected 
                     by high rates of diarrhea due to contaminated lake water which is the residents' only source of drinking water. In partnership 
                     with the community, Pamoja CBO designed and implemented a short-term water project (LifeStraw ) to address this problem.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     LifeStraw is a new line of portable, low maintenance and easy to use point-of-use water purifiers. The filters were distributed 
                     to the entire island population in 2009 and has resulted in a dramatic reduction in diarrhea rates and has averted deaths, particularly 
                     among children under 5 years old. In May 2010, Pamoja CBO complete a one-year follow-up evaluation of this project and disseminate the results.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     The Remba Island Safe Water Project furthers our exempt purposes by increasing community capacity to address a critical health issue on the island. 
                     Approximately 10% of our time is allocated to completing this activity. Pamoja CBO received funding for this project as a private donation through 
                     Rotary Internation

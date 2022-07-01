@@ -24,14 +24,43 @@
     <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
         rel="stylesheet" type="text/css" />
 
-    <style>
-        .lyon {
-            font-family: 'Lyon Display Web Black'
-        }
-        .arnhem {
-            font-family: 'Arnhem Blond'
-        }
-    </style>
+<style>
+    .lyon {
+        font-family: 'Lyon Display Web Black'
+    }
+    .arnhem {
+        font-family: 'Arnhem Blond'
+    }
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+    .mobiliner{
+        line-height:1.4;
+    }
+    .cha-1 {
+        order:1;
+    }
+    .cha-2{
+        padding-top:25px;
+        order:2;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+
+}
+</style>
     <script
         nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
 </head>
@@ -76,7 +105,7 @@
             <div class="col-md-5">
                 <!-- <h2 class="text-center"><span style="font-weight:bold">D.R.E.A.M.S.</span> - Reducing new HIV  infections and preventing GBV  among Adolescent girls and young women ages 9-24</h2> -->
                 <h1 class="lyon" style="font-weight: bold;letter-spacing: 3px;">Research Projects</h1>
-                <p class="text-justify">Research projects research projects research projects research projects research projects</p>
+                <p class="text-justify mobiliner">Research projects research projects research projects research projects research projects</p>
             <br>
             </div>
             <div class="col-md-5">
@@ -88,7 +117,7 @@
       <div class="container" style="max-width:1440px">
         
         <div class="row">
-    <div class="col-xl-4 order-xl-2">
+    <div class="col-xl-4 order-xl-2 cha-2">
         <!-- Progress track -->
         <div class="card">
             <!-- Card header -->
@@ -104,16 +133,15 @@
                 <!-- List group -->
                 <ul class="list-group list-group-flush list my--3">
                     
-                    <p class="text-gray display-5">1. Children affected/infected with HIV</p>
-                    <p class="text-gray display-5">2. Inclusion of Girls in decision making</p>
-                    <p class="text-gray display-5">3. Support the Children's Education</p>
-                    <p class="text-gray display-5">4. Sustainable Livelihoods</p>
-                    <p class="text-gray display-5">5. Providing water filters</p>
+                    <p class="text-gray display-5 mobiliner">1. <a href="{% url 'mainapp:cause-ovc' %}">Children affected/infected with HIV</a></p>
+                    <p class="text-gray display-5 mobiliner">2. <a href="{% url 'mainapp:cause-she-leads' %}">Inclusion of Girls in decision making</a></p>
+                    <p class="text-gray display-5 mobiliner">3. <a href="{% url 'mainapp:child-sponsorship' %}">Support the Children's Education</a></p>
+                    <p class="text-gray display-5 mobiliner">4. <a href="{% url 'mainapp:sustainable-livelihoods' %}">Sustainable Livelihoods</a></p>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="col-xl-8 order-xl-1">
+    <div class="col-xl-8 order-xl-1 cha-1">
         <div class="row">
         </div>
         <div class="card">
@@ -128,8 +156,8 @@
                 </div>
             </div>
             <div class="card-body">
-                <p class="text-justify"><span style="font-weight:bold; font-size:17px;">a) Research Projects Fabrication Lab in a Kit (FLIK): Do it Yourself Digital (DIY) Assistive Technology (DAT) Study in Kenya</span></p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner"><span style="font-weight:bold; font-size:17px;">a) Research Projects Fabrication Lab in a Kit (FLIK): Do it Yourself Digital (DIY) Assistive Technology (DAT) Study in Kenya</span></p>
+                <p class="text-justify mobiliner">
                     This is a research study in collaboration with Maseno University and York University, Canada. In this project, we use a Community-Based Research 
                     (CBR) approach to understand the socio-economic, cultural, psychological and technological dynamics that determine the impact of designing, 
                     developing and deploying do it yourself (DIY) digital assistive technology (DAT) for Kenyan children with disabilities. Specifically, 
@@ -139,7 +167,7 @@
                     DIY open-source communication and information access system that the study team has developed and used in collaborative workshops with 
                     teachers, parents and children with disabilities in other set-ups
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     Fabrication Lab in a Kit (FLiK) is a 12 months research study that will be done in three phases, each engaging key stakeholders. 
                     Phase 1 will involve conducting an environmental scan of the fabrication material and technology available in Kenya and design 
                     technical kits and teaching material to be used in the workshops. Phase 2 will involve training of research assistants and 
@@ -147,7 +175,7 @@
                     stakeholders, including children with disabilities (~10-15 children) and their teachers, where modified TalkBoxes will be 
                     designed and fabricated. Data will be collected before, during and after the workshop. Phase 3 will focus on analysis of data and dissemination.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     The intended project outcomes include (1) understanding the impact of participatory practices on attitudes towards disabilities, 
                     on self-efficacy, and on the technical knowledge of stakeholders; (2) increased access to DATs both through access to the developed 
                     technologies retained by stakeholders and the participants' increased technical knowledge; and 4) an increased understanding of the 
@@ -156,30 +184,29 @@
                     through genuinely collaborative communities that bridge ability, age, income, and expertise domain.
                 </p>
                 <br>
-                <p style="font-weight:bold; font-size:18px;">Who's Involved</p>
-                <p class="text-justify">
+                <p class="mobiliner" style="font-weight:bold; font-size:18px;">Who's Involved</p>
+                <p class="text-justify mobiliner">
                     <span style="font-weight: bold;">i) Children Living with Disability: </span> We recruit children living with disability from St. Francis, 
                     Oriang' Primary School (n=12) and Lutheran School of Mentally Handicapped (12), both which are in Kisumu County. Method: First the school 
                     population is profiled to establish the total number of children in the school. A list of children living with disability in the school is 
                     prepared to establish types of disabilities in the school. Children living disability (speech, cognitive and hearing disability) are then 
                     sampled and screened for participation.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     <span style="font-weight:bold;">ii) Parents and Caregivers of Children with Disability: </span> Parents of children with disability at St. 
                     Francis Oriang' and parents of children with disability from Lutheran are screened for eligibility to participate in the study and only 
                     those who meet the selection criteria will be eligible to participate. Eligibility criteria include (a) parents living with children with 
                     disability for more than three months, (b) Parents living with disability, and (c) Parents whose children are in contact with children with 
                     disability (in the same class). Selected parents participate in an in-depth interview to assess their knowledge, attitude and perception of toward disability.
                 </p>
-                <p class="text-justify">
+                <p class="text-justify mobiliner">
                     <span style="font-weight: bold;">iii) Facilitators: </span>A total of 6 facilitators from Maseno University have been recruited to participate in the project. 
                     This is distributed across different departments as follows: Computer science students=2, Social work students=2, Special education students= 2 computer 
                     instructors (1 each from the participating schools)
                 </p>
                 <br>
-                <br>
-                <p style="font-weight:bold; font-size:17px;">b) Production of Moringa Concentrate Using Appropriate Technologies (MC) in Kisumu County, Kenya.</p>
-                <p class="text-justify">
+                <p class="mobiliner" style="font-weight:bold; font-size:17px;">b) Production of Moringa Concentrate Using Appropriate Technologies (MC) in Kisumu County, Kenya.</p>
+                <p class="text-justify mobiliner">
                     This is a research study in collaboration with Northwestern University and UC Davies, USA. In this study, our general objective 
                     is to assess the impacts of household water insecurity on agricultural and economic productivity, nutrition, and physical and 
                     psychosocial health in Kisumu County, Kenya. Specifically, we aim to investigate the prevalence of household water insecurity in 

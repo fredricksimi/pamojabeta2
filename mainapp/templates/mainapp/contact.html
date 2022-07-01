@@ -37,11 +37,18 @@
     .headtitle{
         font-family: 'Arnhem Blond' !important;font-weight:900;font-size:30px;
     }
+    .footlogo{
+        height:64px;
+        width:auto;
+    }
 }
 
 @media only screen and (min-width : 480px) {
     .headtitle{
         font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+    }
+    .footlogo{
+        width:300px;height:auto
     }
 }
 /* Small viewport or screen */
@@ -49,17 +56,26 @@
     .headtitle{
         font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
     }
+    .footlogo{
+        width:300px;height:auto
+    }
 }
 /* Medium viewport or screen */
 @media only screen and (min-width : 992px) {
     .headtitle{
         font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
     }
+    .footlogo{
+        width:300px;height:auto
+    }
 }
 /* Large viewport or screen */
 @media only screen and (min-width : 1200px) {
     .headtitle{
         font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+    }
+    .footlogo{
+        width:300px;height:auto
     }
 }
 </style>
@@ -148,8 +164,8 @@
     <br><br><br>
     <div class="row">
         <div class="col-md-4">
-            <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
-                    style="width:300px;height:auto">
+            <img class="img-fluid footlogo" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                    style="">
         </div>
         <div class="col-md-4">
             <h3 style="font-weight: bold;"><img src="https://img.icons8.com/fluency/30/000000/worldwide-location.png"/>&nbsp;&nbsp;Our Offices:</h3>

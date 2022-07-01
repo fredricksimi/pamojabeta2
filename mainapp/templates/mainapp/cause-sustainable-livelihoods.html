@@ -24,14 +24,43 @@
     <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
         rel="stylesheet" type="text/css" />
 
-    <style>
-        .lyon {
-            font-family: 'Lyon Display Web Black'
-        }
-        .arnhem {
-            font-family: 'Arnhem Blond'
-        }
-    </style>
+<style>
+    .lyon {
+        font-family: 'Lyon Display Web Black'
+    }
+    .arnhem {
+        font-family: 'Arnhem Blond'
+    }
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+    .mobiliner{
+        line-height:1.4;
+    }
+    .cha-1 {
+        order:1;
+    }
+    .cha-2{
+        padding-top:25px;
+        order:2;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+
+}
+</style>
     <script
         nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
 </head>
@@ -88,7 +117,7 @@
       <div class="container" style="max-width:1440px">
         
         <div class="row">
-    <div class="col-xl-4 order-xl-2">
+    <div class="col-xl-4 order-xl-2 cha-2">
         <!-- Progress track -->
         <div class="card">
             <!-- Card header -->
@@ -104,16 +133,15 @@
                 <!-- List group -->
                 <ul class="list-group list-group-flush list my--3">
                     
-                    <p class="text-gray display-5">1. Children affected/infected with HIV</p>
-                    <p class="text-gray display-5">2. Inclusion of Girls in decision making</p>
-                    <p class="text-gray display-5">3. Support the Children's Education</p>
-                    <p class="text-gray display-5">4. Sustainable Livelihoods</p>
-                    <p class="text-gray display-5">5. Providing water filters</p>
+                    <p class="text-gray display-5 mobiliner">1. <a href="{% url 'mainapp:cause-ovc' %}">Children affected/infected with HIV</a></p>
+                    <p class="text-gray display-5 mobiliner">2. <a href="{% url 'mainapp:cause-she-leads' %}">Inclusion of Girls in decision making</a></p>
+                    <p class="text-gray display-5 mobiliner">3. <a href="{% url 'mainapp:child-sponsorship' %}">Support the Children's Education</a></p>
+                    <p class="text-gray display-5 mobiliner">4. <a href="{% url 'mainapp:cause-safe-water-projects' %}">Safe Water Projects</a></p>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="col-xl-8 order-xl-1">
+    <div class="col-xl-8 order-xl-1 cha-1">
         <div class="row">
         </div>
         <div class="card">
@@ -128,22 +156,21 @@
                 </div>
             </div>
             <div class="card-body">
-                <p class="text-justify">Partner: Plan International Kenya</p>
-                <p class="text-justify">Target beneficiaries: School going children</p>
-                <p class="text-justify">Duration: </p>
-                <p class="text-justify" style="font-weight:bold;">Objective: </p>
+                <p class="text-justify mobiliner">Partner: Plan International Kenya</p>
+                <p class="text-justify mobiliner">Target beneficiaries: School going children</p>
+                <p class="text-justify mobiliner">Duration: </p>
+                <p class="text-justify mobiliner" style="font-weight:bold;">Objective: </p>
                 
-                <br>
-                <p class="text-justify">Key Accomplishments: </p>
-                <p class="text-justify">Economic status is a clearly established determinant of health, and 50% of Kenyas live below the poverty line. Pamoja CBO has been working with the community and the University
+                <p class="text-justify mobiliner"><span style="font-weight:bold">Key Accomplishments: </span></p>
+                <p class="text-justify mobiliner">Economic status is a clearly established determinant of health, and 50% of Kenyas live below the poverty line. Pamoja CBO has been working with the community and the University
                     of British Columbia to establish local best practices for poverty reduction, including a baseline survey conducted in 2009. In 2010 visiting students from UBC put together market analyses and business
                     plans for a menu of optins with potential to help people lift themselves out of the poverty cycle (e.g. bee keeping, brick making, mushroom farming, etc.). They also investigated community micro-credit schemes
                     for providing start-up capital. Pamoja CBO will pilot goat project, mushroom farming, and microfinance, as potential sustainable livelihood strategies, and will plan to expand them further in future years.
                 </p>
-                <p class="text-justify">The sustainable Livelihoods Project furthers our exempt purposes by empowering community members to move out of the poverty cycle, thus becoming better able to support their own health, education,
+                <p class="text-justify mobiliner">The sustainable Livelihoods Project furthers our exempt purposes by empowering community members to move out of the poverty cycle, thus becoming better able to support their own health, education,
                     and development needs independently.
                 </p>
-                <p class="text-justify">Pamoja CBO is funded by the Global Health Initiative (a student group at the University of British Columbia, Canada), to implement this project.</p>
+                <p class="text-justify mobiliner">Pamoja CBO is funded by the Global Health Initiative (a student group at the University of British Columbia, Canada), to implement this project.</p>
                 <!-- <p class="text-justify">For <strong>Number Here</strong> USD, you can support lobby and advocacy exercises for girls who need and facilitate referrals and linkages to requisite support groups.</p>
                 <p class="text-justify"><strong>Stakeholders:</strong></p>
                 <p class="text-justify">Targeting government - Policy issues - Inclusion and meaningful participation of GYW</p>
