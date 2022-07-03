@@ -16,6 +16,7 @@ urlpatterns = [
     path('cause-detail/sustainable-livelihoods', views.cause_sustainable_livelihoods, name='sustainable-livelihoods'),
     path('cause-detail/research', views.cause_research, name='cause-research'),
     path('cause-detail/safe-water-projects', views.cause_safe_water_projects, name='cause-safe-water-projects'),
+    path('cause-detail/youth-center', views.cause_youth_center, name='cause-youth-center'),
     ####### END OF CAUSES #######
     
     path('blog', views.blog_view, name='blog'),
