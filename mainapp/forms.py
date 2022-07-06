@@ -19,6 +19,7 @@ class MentorForm(forms.ModelForm):
     firstname = forms.CharField(widget=forms.TextInput(), label="First Name")
     lastname = forms.CharField(widget=forms.TextInput(), label="Last Name")
     email = forms.EmailField(widget=forms.EmailInput())
+    phone_number = forms.CharField(widget=forms.TextInput(), label="Phone Number", required=False)
     company = forms.CharField(widget=forms.TextInput())
     country = forms.Select()
     area_of_interest = forms.CharField(widget=forms.TextInput())
