@@ -3,8 +3,8 @@ from .models import Volunteer, Mentor, ContactPage, MailList, Help_choices
 from .countries import COUNTRIES
 
 class VolunteerForm(forms.ModelForm):
-    firstname = forms.CharField(widget=forms.TextInput())
-    lastname = forms.CharField(widget=forms.TextInput())
+    firstname = forms.CharField(widget=forms.TextInput(),label="First Name")
+    lastname = forms.CharField(widget=forms.TextInput(),label="Last Name")
     email = forms.EmailField(widget=forms.EmailInput())
     country = forms.Select()
     what_can_you_help_with = forms.ModelMultipleChoiceField(queryset=Help_choices.objects.all(), widget=forms.CheckboxSelectMultiple)
@@ -16,8 +16,8 @@ class VolunteerForm(forms.ModelForm):
         fields = '__all__'
 
 class MentorForm(forms.ModelForm):
-    firstname = forms.CharField(widget=forms.TextInput())
-    lastname = forms.CharField(widget=forms.TextInput())
+    firstname = forms.CharField(widget=forms.TextInput(), label="First Name")
+    lastname = forms.CharField(widget=forms.TextInput(), label="Last Name")
     email = forms.EmailField(widget=forms.EmailInput())
     company = forms.CharField(widget=forms.TextInput())
     country = forms.Select()
